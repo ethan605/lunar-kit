@@ -1,0 +1,12 @@
+{
+  "name": "@lunar-kit/converters",
+  "version": "0.1.0",
+  "description": "Lunisolar conversion tools",
+  "author": "Ethan N.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ethan605/lunar-kit",
+    "directory": "packages/converters"
+  }
+}
