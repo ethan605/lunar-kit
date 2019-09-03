@@ -18,6 +18,10 @@ export default class CalendarDate {
     this.year = year;
   }
 
+  /**
+   * Convert Julian days number into a CalendarDate
+   * Formula at: https://www.tondering.dk/claus/cal/julperiod.php#formula
+   */
   static fromJulianDays(julianDays: number): CalendarDate {
     let b = 0;
     let c = 0;

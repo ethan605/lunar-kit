@@ -1,3 +1,5 @@
+import CalendarDate from '../CalendarDate';
+
 const FIXTURES = [
   {
     gregorianDate: [3, 9, 2019],
@@ -40,8 +42,6 @@ const FIXTURES = [
     julianDays: -1,
   },
 ];
-
-import CalendarDate from '../CalendarDate';
 
 describe('CalendarDate', () => {
   it('should convert to Julian days correctly', () => {
