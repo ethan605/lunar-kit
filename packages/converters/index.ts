@@ -193,10 +193,8 @@ function computeSunLongitude(dayNumber: number, timeZone: number): number {
 
 /* Find the day that starts the luner month 11 of the given year for the given time zone */
 function getLunarMonth11(year: number, timeZone: number): number {
-  // const off =
-  //   calculateJuliusDayFromDate({ day: 31, month: 12, year: year }) -
-  //   2415021.076998695;
-  const off = calculateJuliusDayFromDate({ day: 31, month: 12, year: year }) - 2415021;
+  const off = calculateJuliusDayFromDate({ day: 31, month: 12, year }) - 2415021.076998695;
+  // const off = calculateJuliusDayFromDate({ day: 31, month: 12, year }) - 2415021;
   const k = Math.floor(off / 29.530588853);
   let nm = computeNewMoonDay(k, timeZone);
   const sunLong = computeSunLongitude(nm, timeZone); // sun longitude at local midnight
