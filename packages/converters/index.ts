@@ -60,33 +60,9 @@ interface SexagenaryPair {
   stem: Stem;
 }
 
-export const BRANCHES_MAPPING = [
-  "tys",
-  "suu",
-  "dan",
-  "mao",
-  "thin",
-  "tyj",
-  "ngo",
-  "mui",
-  "than",
-  "dau",
-  "tuat",
-  "hoi",
-];
+export const BRANCHES_MAPPING = ['tys', 'suu', 'dan', 'mao', 'thin', 'tyj', 'ngo', 'mui', 'than', 'dau', 'tuat', 'hoi'];
 
-export const STEMS_MAPPING = [
-  "giap",
-  "at",
-  "binh",
-  "dinh",
-  "mau",
-  "ky",
-  "canh",
-  "tan",
-  "nham",
-  "quy",
-];
+export const STEMS_MAPPING = ['giap', 'at', 'binh', 'dinh', 'mau', 'ky', 'canh', 'tan', 'nham', 'quy'];
 
 const JULIUS_DAY_EPOCH = 2299160;
 
@@ -171,32 +147,16 @@ function computeNewMoonDay(k: number, timeZone: number): number {
 
   // Moon's argument of latitude
   const F = 21.2964 + 390.67050646 * k - 0.0016528 * T2 - 0.00000239 * T3;
-  let C1 =
-    (0.1734 - 0.000393 * T) * Math.sin(M * dr) + 0.0021 * Math.sin(2 * dr * M);
+  let C1 = (0.1734 - 0.000393 * T) * Math.sin(M * dr) + 0.0021 * Math.sin(2 * dr * M);
   C1 = C1 - 0.4068 * Math.sin(Mpr * dr) + 0.0161 * Math.sin(dr * 2 * Mpr);
   C1 -= 0.0004 * Math.sin(dr * 3 * Mpr);
   C1 = C1 + 0.0104 * Math.sin(dr * 2 * F) - 0.0051 * Math.sin(dr * (M + Mpr));
-  C1 =
-    C1 -
-    0.0074 * Math.sin(dr * (M - Mpr)) +
-    0.0004 * Math.sin(dr * (2 * F + M));
-  C1 =
-    C1 -
-    0.0004 * Math.sin(dr * (2 * F - M)) -
-    0.0006 * Math.sin(dr * (2 * F + Mpr));
-  C1 =
-    C1 +
-    0.001 * Math.sin(dr * (2 * F - Mpr)) +
-    0.0005 * Math.sin(dr * (2 * Mpr + M));
+  C1 = C1 - 0.0074 * Math.sin(dr * (M - Mpr)) + 0.0004 * Math.sin(dr * (2 * F + M));
+  C1 = C1 - 0.0004 * Math.sin(dr * (2 * F - M)) - 0.0006 * Math.sin(dr * (2 * F + Mpr));
+  C1 = C1 + 0.001 * Math.sin(dr * (2 * F - Mpr)) + 0.0005 * Math.sin(dr * (2 * Mpr + M));
 
   let deltaT = 0;
-  if (T < -11)
-    deltaT =
-      0.001 +
-      0.000839 * T +
-      0.0002261 * T2 -
-      0.00000845 * T3 -
-      0.000000081 * T * T3;
+  if (T < -11) deltaT = 0.001 + 0.000839 * T + 0.0002261 * T2 - 0.00000845 * T3 - 0.000000081 * T * T3;
   else deltaT = -0.000278 + 0.000265 * T + 0.000262 * T2;
 
   return Math.floor(Jd1 + C1 - deltaT + 0.5 + timeZone / 24);
@@ -223,9 +183,7 @@ function computeSunLongitude(dayNumber: number, timeZone: number): number {
   const M = 357.5291 + 35999.0503 * T - 0.0001559 * T2 - 0.00000048 * T * T2;
   const L0 = 280.46645 + 36000.76983 * T + 0.0003032 * T2; // mean longitude, degree
   let DL = (1.9146 - 0.004817 * T - 0.000014 * T2) * Math.sin(dr * M);
-  DL +=
-    (0.019993 - 0.000101 * T) * Math.sin(dr * 2 * M) +
-    0.00029 * Math.sin(dr * 3 * M);
+  DL += (0.019993 - 0.000101 * T) * Math.sin(dr * 2 * M) + 0.00029 * Math.sin(dr * 3 * M);
 
   let L = L0 + DL; // true longitude, degree
   L *= dr;
@@ -238,8 +196,7 @@ function getLunarMonth11(year: number, timeZone: number): number {
   // const off =
   //   calculateJuliusDayFromDate({ day: 31, month: 12, year: year }) -
   //   2415021.076998695;
-  const off =
-    calculateJuliusDayFromDate({ day: 31, month: 12, year: year }) - 2415021;
+  const off = calculateJuliusDayFromDate({ day: 31, month: 12, year: year }) - 2415021;
   const k = Math.floor(off / 29.530588853);
   let nm = computeNewMoonDay(k, timeZone);
   const sunLong = computeSunLongitude(nm, timeZone); // sun longitude at local midnight
@@ -266,9 +223,7 @@ function computeLeapMonthOffset(a11: number, timeZone: number): number {
 /**
  * Convert solar time hh/dd/mm/yyyy to the corresponding lunar date
  */
-export function convertSolarToLunar(
-  solarDateTime: SolarDateTime
-): LunarDateTime {
+export function convertSolarToLunar(solarDateTime: SolarDateTime): LunarDateTime {
   const { day, hour, month, year, timeZone } = solarDateTime;
   const dayNumber = calculateJuliusDayFromDate({ day, month, year });
   const k = Math.floor((dayNumber - 2415021.076998695) / 29.530588853);

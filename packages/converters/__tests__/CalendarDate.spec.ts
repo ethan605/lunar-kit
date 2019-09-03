@@ -1,4 +1,4 @@
-const JULIAN_DAYS = [
+const FIXTURES = [
   {
     gregorianDate: [3, 9, 2019],
     julianDays: 2458730,
@@ -10,6 +10,14 @@ const JULIAN_DAYS = [
   {
     gregorianDate: [30, 5, 1975],
     julianDays: 2442563,
+  },
+  {
+    gregorianDate: [15, 10, 1582],
+    julianDays: 2299161,
+  },
+  {
+    gregorianDate: [4, 10, 1582],
+    julianDays: 2299160,
   },
   {
     gregorianDate: [26, 7, 1],
@@ -33,29 +41,21 @@ const JULIAN_DAYS = [
   },
 ];
 
-import GregorianDate from '../GregorianDate';
+import CalendarDate from '../CalendarDate';
 
-describe('GregorianDate', () => {
-  it('should compare with other GregorianDate correctly', () => {
-    const date1 = new GregorianDate(1, 1, 1);
-    expect(date1.isEqualDate(1, 1, 1)).toBeTruthy();
-
-    const date2 = new GregorianDate(1, 1, 1);
-    expect(date2.isEqualDate(3, 9, 2019)).toBeFalsy();
-  });
-
+describe('CalendarDate', () => {
   it('should convert to Julian days correctly', () => {
-    JULIAN_DAYS.forEach(({ gregorianDate, julianDays }) => {
+    FIXTURES.forEach(({ gregorianDate, julianDays }) => {
       const [day, month, year] = gregorianDate;
-      const gDate = new GregorianDate(day, month, year);
+      const gDate = new CalendarDate(day, month, year);
       expect(gDate.toJulianDays()).toEqual(julianDays);
     });
   });
 
   it('should be parsed from Julian days correctly', () => {
-    JULIAN_DAYS.forEach(({ gregorianDate, julianDays }) => {
+    FIXTURES.forEach(({ gregorianDate, julianDays }) => {
       const [day, month, year] = gregorianDate;
-      const gDate = GregorianDate.fromJulianDays(julianDays);
+      const gDate = CalendarDate.fromJulianDays(julianDays);
       expect(gDate.isEqualDate(day, month, year)).toBeTruthy();
     });
   });
