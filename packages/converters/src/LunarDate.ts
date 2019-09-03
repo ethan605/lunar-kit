@@ -2,8 +2,9 @@ import Astronomy from './Astronomy';
 import BaseDate from './BaseDate';
 import SolarDate from './SolarDate';
 
+import Sexagenary from './Sexagenary';
+
 export default class LunarDate extends BaseDate {
-  private _hour: number;
   private _isLeapMonth: boolean;
 
   constructor(day: number, month: number, year: number, isLeapMonth: boolean) {
@@ -47,5 +48,34 @@ export default class LunarDate extends BaseDate {
 
     const monthStart = astronomy.getNewMoonDay(newMoonOrder + offset);
     return SolarDate.fromJulianDays(monthStart + this._day - 1);
+  }
+
+  toSexagenaries(timeZone: number, solarTime: number[]): { [key: string]: Sexagenary } {
+    const julianDays = this.toSolarDate(timeZone).toJulianDays();
+
+    const year = new Sexagenary({
+      stem: (this._year + 6) % 10,
+      branch: (this._year + 8) % 12,
+    });
+
+    const month = new Sexagenary({
+      stem: (this._year * 12 + this._month + 3) % 10,
+      branch: (this._month + 1) % 12,
+    });
+
+    const day = new Sexagenary({
+      stem: (julianDays + 9) % 10,
+      branch: (julianDays + 1) % 12,
+    });
+
+    const [solarHour, solarMinute] = solarTime;
+    const lunarHour = Math.floor(((solarHour + solarMinute / 60 + 1) % 24) / 2);
+
+    const hour = new Sexagenary({
+      stem: (((julianDays + 9) % 5) * 2 + lunarHour) % 10,
+      branch: lunarHour,
+    });
+
+    return { hour, day, month, year };
   }
 }

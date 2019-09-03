@@ -219,3 +219,13 @@ function convertLunar2Solar(lunarDay, lunarMonth, lunarYear, lunarLeap, timeZone
 	monthStart = getNewMoonDay(k+off, timeZone);
 	return jdToDate(monthStart+lunarDay-1);
 }
+
+console.log(7 + 15 / 60)
+console.log(21 + 5 / 60)
+console.log(17 + 5 / 60)
+console.log(8 + 35 / 60)
+console.log(7 + 5 / 60)
+console.log(4)
+console.log(22 + 25 / 60)
+console.log(7)
+console.log(21 + 15 / 60)

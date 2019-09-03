@@ -1,0 +1,344 @@
+[
+  {
+    "solarDate": [
+      5,
+      1,
+      1996
+    ],
+    "solarTime": [
+      7,
+      15
+    ],
+    "timeZone": 7,
+    "sexagenaries": {
+      "default": {
+        "hour": "ren-dragon",
+        "day": "xin-ox",
+        "month": "wu-rat",
+        "year": "yi-pig"
+      },
+      "ko": {
+        "hour": "임 진",
+        "day": "신 축",
+        "month": "무 자",
+        "year": "을 해"
+      },
+      "vi": {
+        "hour": "Nhâm Thìn",
+        "day": "Tân Sửu",
+        "month": "Mậu Tý",
+        "year": "Ất Hợi"
+      },
+      "zh": {
+        "hour": "壬 辰",
+        "day": "辛 丑",
+        "month": "戊 子",
+        "year": "乙 亥"
+      }
+    }
+  },
+  {
+    "solarDate": [
+      23,
+      12,
+      1994
+    ],
+    "solarTime": [
+      21,
+      5
+    ],
+    "timeZone": 7,
+    "sexagenaries": {
+      "default": {
+        "hour": "gui-pig",
+        "day": "gui-goat",
+        "month": "bing-rat",
+        "year": "jia-dog"
+      },
+      "ko": {
+        "hour": "계 해",
+        "day": "계 미",
+        "month": "병 자",
+        "year": "갑 술"
+      },
+      "vi": {
+        "hour": "Quý Hợi",
+        "day": "Quý Mùi",
+        "month": "Bính Tý",
+        "year": "Giáp Tuất"
+      },
+      "zh": {
+        "hour": "癸 亥",
+        "day": "癸 未",
+        "month": "丙 子",
+        "year": "甲 戌"
+      }
+    }
+  },
+  {
+    "solarDate": [
+      25,
+      4,
+      1993
+    ],
+    "solarTime": [
+      17,
+      5
+    ],
+    "timeZone": 7,
+    "sexagenaries": {
+      "default": {
+        "hour": "ding-rooster",
+        "day": "bing-rat",
+        "month": "bing-dragon",
+        "year": "gui-rooster"
+      },
+      "ko": {
+        "hour": "정 유",
+        "day": "병 자",
+        "month": "병 진",
+        "year": "계 유"
+      },
+      "vi": {
+        "hour": "Đinh Dậu",
+        "day": "Bính Tý",
+        "month": "Bính Thìn",
+        "year": "Quý Dậu"
+      },
+      "zh": {
+        "hour": "丁 酉",
+        "day": "丙 子",
+        "month": "丙 辰",
+        "year": "癸 酉"
+      }
+    }
+  },
+  {
+    "solarDate": [
+      28,
+      6,
+      1994
+    ],
+    "solarTime": [
+      8,
+      35
+    ],
+    "timeZone": 7,
+    "sexagenaries": {
+      "default": {
+        "hour": "geng-dragon",
+        "day": "yi-rooster",
+        "month": "geng-horse",
+        "year": "jia-dog"
+      },
+      "ko": {
+        "hour": "경 진",
+        "day": "을 유",
+        "month": "경 오",
+        "year": "갑 술"
+      },
+      "vi": {
+        "hour": "Canh Thìn",
+        "day": "Ất Dậu",
+        "month": "Canh Ngọ",
+        "year": "Giáp Tuất"
+      },
+      "zh": {
+        "hour": "庚 辰",
+        "day": "乙 酉",
+        "month": "庚 午",
+        "year": "甲 戌"
+      }
+    }
+  },
+  {
+    "solarDate": [
+      21,
+      8,
+      1995
+    ],
+    "solarTime": [
+      7,
+      5
+    ],
+    "timeZone": 7,
+    "sexagenaries": {
+      "default": {
+        "hour": "wu-dragon",
+        "day": "jia-monkey",
+        "month": "jia-monkey",
+        "year": "yi-pig"
+      },
+      "ko": {
+        "hour": "무 진",
+        "day": "갑 신",
+        "month": "갑 신",
+        "year": "을 해"
+      },
+      "vi": {
+        "hour": "Mậu Thìn",
+        "day": "Giáp Thân",
+        "month": "Giáp Thân",
+        "year": "Ất Hợi"
+      },
+      "zh": {
+        "hour": "戊 辰",
+        "day": "甲 申",
+        "month": "甲 申",
+        "year": "乙 亥"
+      }
+    }
+  },
+  {
+    "solarDate": [
+      20,
+      2,
+      1992
+    ],
+    "solarTime": [
+      4,
+      0
+    ],
+    "timeZone": 7,
+    "sexagenaries": {
+      "default": {
+        "hour": "geng-tiger",
+        "day": "bing-tiger",
+        "month": "ren-tiger",
+        "year": "ren-monkey"
+      },
+      "ko": {
+        "hour": "경 인",
+        "day": "병 인",
+        "month": "임 인",
+        "year": "임 신"
+      },
+      "vi": {
+        "hour": "Canh Dần",
+        "day": "Bính Dần",
+        "month": "Nhâm Dần",
+        "year": "Nhâm Thân"
+      },
+      "zh": {
+        "hour": "庚 寅",
+        "day": "丙 寅",
+        "month": "壬 寅",
+        "year": "壬 申"
+      }
+    }
+  },
+  {
+    "solarDate": [
+      11,
+      11,
+      1999
+    ],
+    "solarTime": [
+      22,
+      25
+    ],
+    "timeZone": 7,
+    "sexagenaries": {
+      "default": {
+        "hour": "xin-pig",
+        "day": "ding-rabbit",
+        "month": "yi-pig",
+        "year": "ji-rabbit"
+      },
+      "ko": {
+        "hour": "신 해",
+        "day": "정 묘",
+        "month": "을 해",
+        "year": "기 묘"
+      },
+      "vi": {
+        "hour": "Tân Hợi",
+        "day": "Đinh Mão",
+        "month": "Ất Hợi",
+        "year": "Kỷ Mão"
+      },
+      "zh": {
+        "hour": "辛 亥",
+        "day": "丁 卯",
+        "month": "乙 亥",
+        "year": "己 卯"
+      }
+    }
+  },
+  {
+    "solarDate": [
+      20,
+      12,
+      1973
+    ],
+    "solarTime": [
+      7,
+      0
+    ],
+    "timeZone": 7,
+    "sexagenaries": {
+      "default": {
+        "hour": "geng-dragon",
+        "day": "geng-tiger",
+        "month": "jia-rat",
+        "year": "gui-ox"
+      },
+      "ko": {
+        "hour": "경 진",
+        "day": "경 인",
+        "month": "갑 자",
+        "year": "계 축"
+      },
+      "vi": {
+        "hour": "Canh Thìn",
+        "day": "Canh Dần",
+        "month": "Giáp Tý",
+        "year": "Quý Sửu"
+      },
+      "zh": {
+        "hour": "庚 辰",
+        "day": "庚 寅",
+        "month": "甲 子",
+        "year": "癸 丑"
+      }
+    }
+  },
+  {
+    "solarDate": [
+      10,
+      12,
+      1993
+    ],
+    "solarTime": [
+      21,
+      15
+    ],
+    "timeZone": 7,
+    "sexagenaries": {
+      "default": {
+        "hour": "ding-pig",
+        "day": "yi-ox",
+        "month": "gui-pig",
+        "year": "gui-rooster"
+      },
+      "ko": {
+        "hour": "정 해",
+        "day": "을 축",
+        "month": "계 해",
+        "year": "계 유"
+      },
+      "vi": {
+        "hour": "Đinh Hợi",
+        "day": "Ất Sửu",
+        "month": "Quý Hợi",
+        "year": "Quý Dậu"
+      },
+      "zh": {
+        "hour": "丁 亥",
+        "day": "乙 丑",
+        "month": "癸 亥",
+        "year": "癸 酉"
+      }
+    }
+  }
+]

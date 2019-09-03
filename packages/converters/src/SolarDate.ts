@@ -1,6 +1,7 @@
 import Astronomy from './Astronomy';
 import BaseDate from './BaseDate';
 import LunarDate from './LunarDate';
+import Sexagenary from './Sexagenary';
 
 const JULIAN_CALENDAR_EPOCH = 2299160; // Oct 14, 1582 AD
 
@@ -88,5 +89,10 @@ export default class SolarDate extends BaseDate {
     if (lunarMonth > 12) lunarMonth = lunarMonth - 12;
     if (lunarMonth >= 11 && diff < 4) lunarYear -= 1;
     return new LunarDate(lunarDay, lunarMonth, lunarYear, isLeapMonth);
+  }
+
+  toSexagenaries(timeZone: number, solarTime: number[]): { [key: string]: Sexagenary } {
+    const lunarDate = this.toLunarDate(timeZone);
+    return lunarDate.toSexagenaries(timeZone, solarTime);
   }
 }
