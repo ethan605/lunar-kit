@@ -1,5 +1,4 @@
 const JULIAN_CALENDAR_EPOCH = 2299160; // Oct 14, 1582 AD
-const MIN_YEAR = -4712; // Jan 1, 4713 BC
 
 enum DateComparison {
   Before = -1,
@@ -51,8 +50,6 @@ export default class CalendarDate {
    * Formula at: https://www.tondering.dk/claus/cal/julperiod.php#formula
    */
   toJulianDays(): number {
-    if (this.year < MIN_YEAR) return -1;
-
     const a = Math.floor((14 - this.month) / 12);
     const y = this.year + 4800 - a;
     const m = this.month + 12 * a - 3;

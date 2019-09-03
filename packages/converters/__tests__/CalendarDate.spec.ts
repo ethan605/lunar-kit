@@ -38,8 +38,12 @@ const FIXTURES = [
     julianDays: 0,
   },
   {
-    gregorianDate: [31, 12, -4713], // Out of Julian days range
+    gregorianDate: [31, 12, -4713], // Before the first Julian day
     julianDays: -1,
+  },
+  {
+    gregorianDate: [1, 1, -4713], // Before the first Julian day
+    julianDays: -365,
   },
 ];
 
