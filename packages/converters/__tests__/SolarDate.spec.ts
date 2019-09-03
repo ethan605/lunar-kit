@@ -21,7 +21,7 @@ describe('SolarDate', () => {
     });
   });
 
-  it('should convert lunar dates correctly', () => {
+  it('should convert to lunar dates correctly', () => {
     conversionFixtures.forEach(({ solar, timeZone, lunar, leapMonth }) => {
       const [day, month, year] = solar;
       const solarDate = new SolarDate(day, month, year);
