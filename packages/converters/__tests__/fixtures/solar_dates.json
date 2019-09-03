@@ -1,0 +1,90 @@
+[
+  {
+    "gregorianDate": [
+      3,
+      9,
+      2019
+    ],
+    "julianDays": 2458730
+  },
+  {
+    "gregorianDate": [
+      16,
+      10,
+      2000
+    ],
+    "julianDays": 2451834
+  },
+  {
+    "gregorianDate": [
+      30,
+      5,
+      1975
+    ],
+    "julianDays": 2442563
+  },
+  {
+    "gregorianDate": [
+      15,
+      10,
+      1582
+    ],
+    "julianDays": 2299161
+  },
+  {
+    "gregorianDate": [
+      4,
+      10,
+      1582
+    ],
+    "julianDays": 2299160
+  },
+  {
+    "gregorianDate": [
+      26,
+      7,
+      1
+    ],
+    "julianDays": 1721630
+  },
+  {
+    "gregorianDate": [
+      1,
+      1,
+      0
+    ],
+    "julianDays": 1721058
+  },
+  {
+    "gregorianDate": [
+      20,
+      7,
+      -50
+    ],
+    "julianDays": 1702996
+  },
+  {
+    "gregorianDate": [
+      1,
+      1,
+      -4712
+    ],
+    "julianDays": 0
+  },
+  {
+    "gregorianDate": [
+      31,
+      12,
+      -4713
+    ],
+    "julianDays": -1
+  },
+  {
+    "gregorianDate": [
+      1,
+      1,
+      -4713
+    ],
+    "julianDays": -365
+  }
+]

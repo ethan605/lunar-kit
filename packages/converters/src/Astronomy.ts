@@ -1,4 +1,4 @@
-import CalendarDate from './CalendarDate';
+import SolarDate from './SolarDate';
 
 export default class Astronomy {
   private timeZone: number;
@@ -93,9 +93,8 @@ export default class Astronomy {
    * Find the day that starts the luner month 11 of the given year for the given time zone
    */
   getLunarMonth11(year: number): number {
-    const date = new CalendarDate(31, 12, year);
-
-    const off = date.toJulianDays() - 2415021.076998695;
+    const solarDate = new SolarDate(31, 12, year);
+    const off = solarDate.toJulianDays() - 2415021.076998695;
     const order = Math.floor(off / 29.530588853);
     const newMoonDay = this.getNewMoonDay(order);
     const sunLong = this.getSunLongitude(newMoonDay);

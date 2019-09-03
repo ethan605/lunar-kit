@@ -1,0 +1,47 @@
+[
+  {
+    "year": -4000,
+    "lunarMonth11": 260410,
+    "leapMonthOffset": 13
+  },
+  {
+    "year": -10,
+    "lunarMonth11": 1717745,
+    "leapMonthOffset": 9
+  },
+  {
+    "year": -1,
+    "lunarMonth11": 1721023,
+    "leapMonthOffset": 4
+  },
+  {
+    "year": 0,
+    "lunarMonth11": 1721406,
+    "leapMonthOffset": 13
+  },
+  {
+    "year": 1,
+    "lunarMonth11": 1721760,
+    "leapMonthOffset": 9
+  },
+  {
+    "year": 1582,
+    "lunarMonth11": 2299202,
+    "leapMonthOffset": 5
+  },
+  {
+    "year": 1975,
+    "lunarMonth11": 2442750,
+    "leapMonthOffset": 10
+  },
+  {
+    "year": 2000,
+    "lunarMonth11": 2451875,
+    "leapMonthOffset": 6
+  },
+  {
+    "year": 2019,
+    "lunarMonth11": 2458814,
+    "leapMonthOffset": 6
+  }
+]

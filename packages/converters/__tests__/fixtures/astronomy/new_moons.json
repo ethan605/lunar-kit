@@ -1,0 +1,47 @@
+[
+  {
+    "order": -1000,
+    "julianDays": 2385490,
+    "sunLong": 11
+  },
+  {
+    "order": -10,
+    "julianDays": 2414726,
+    "sunLong": 11
+  },
+  {
+    "order": -2,
+    "julianDays": 2414962,
+    "sunLong": 7
+  },
+  {
+    "order": -4,
+    "julianDays": 2414903,
+    "sunLong": 5
+  },
+  {
+    "order": 0,
+    "julianDays": 2415021,
+    "sunLong": 9
+  },
+  {
+    "order": 1,
+    "julianDays": 2415051,
+    "sunLong": 10
+  },
+  {
+    "order": 30,
+    "julianDays": 2415907,
+    "sunLong": 2
+  },
+  {
+    "order": 5,
+    "julianDays": 2415168,
+    "sunLong": 2
+  },
+  {
+    "order": 1000,
+    "julianDays": 2444552,
+    "sunLong": 7
+  }
+]
