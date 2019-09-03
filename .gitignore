@@ -15,7 +15,7 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
-coverage
+# coverage
 
 # nyc test coverage
 .nyc_output
@@ -56,3 +56,6 @@ jspm_packages/
 
 # next.js build output
 .next
+
+# Parcel build caches
+.cache

@@ -10,7 +10,7 @@
     "directory": "packages/converters"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "gulp build",
     "console": "babel-node --extensions \".ts\"",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest"
@@ -27,7 +27,11 @@
     "eslint-config-prettier": "^6.1.0",
     "eslint-loader": "^3.0.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-exec": "^4.0.0",
     "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.3",
     "prettier": "^1.18.2",
     "typescript": "3.5.2"
   },
