@@ -10,6 +10,7 @@
     "directory": "packages/converters"
   },
   "scripts": {
+    "build": "tsc",
     "console": "babel-node --extensions \".ts\"",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest"
