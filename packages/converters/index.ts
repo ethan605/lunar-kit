@@ -95,7 +95,7 @@ const JULIUS_DAY_EPOCH = 2299160;
  * of days between 1/1/4713 BC (Julian calendar) and dd/mm/yyyy.
  * Formula from http://www.tondering.dk/claus/calendar.html
  */
-function computeJuliusDayFromDate({ day, month, year }: BaseDate): number {
+function calculateJuliusDayFromDate({ day, month, year }: BaseDate): number {
   const a = Math.floor((14 - month) / 12);
   const y = year + 4800 - a;
   const m = month + 12 * a - 3;
@@ -238,10 +238,10 @@ function computeSunLongitude(dayNumber: number, timeZone: number): number {
 /* Find the day that starts the luner month 11 of the given year for the given time zone */
 function getLunarMonth11(year: number, timeZone: number): number {
   // const off =
-  //   computeJuliusDayFromDate({ day: 31, month: 12, year: year }) -
+  //   calculateJuliusDayFromDate({ day: 31, month: 12, year: year }) -
   //   2415021.076998695;
   const off =
-    computeJuliusDayFromDate({ day: 31, month: 12, year: year }) - 2415021;
+    calculateJuliusDayFromDate({ day: 31, month: 12, year: year }) - 2415021;
   const k = Math.floor(off / 29.530588853);
   let nm = computeNewMoonDay(k, timeZone);
   const sunLong = computeSunLongitude(nm, timeZone); // sun longitude at local midnight
@@ -272,7 +272,7 @@ export function convertSolarToLunar(
   solarDateTime: SolarDateTime
 ): LunarDateTime {
   const { day, hour, month, year, timeZone } = solarDateTime;
-  const dayNumber = computeJuliusDayFromDate({ day, month, year });
+  const dayNumber = calculateJuliusDayFromDate({ day, month, year });
   const k = Math.floor((dayNumber - 2415021.076998695) / 29.530588853);
   let monthStart = computeNewMoonDay(k + 1, timeZone);
   if (monthStart > dayNumber) monthStart = computeNewMoonDay(k, timeZone);
@@ -318,7 +318,7 @@ export function convertSolarToLunar(
 }
 
 export function convertSolarToSexagenary(solar: SolarDateTime) {
-  const dayNumber = computeJuliusDayFromDate(solar);
+  const dayNumber = calculateJuliusDayFromDate(solar);
   const lunar = convertSolarToLunar(solar);
 
   const year: SexagenaryPair = {

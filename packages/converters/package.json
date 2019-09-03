@@ -8,5 +8,16 @@
     "type": "git",
     "url": "https://github.com/ethan605/lunar-kit",
     "directory": "packages/converters"
-  }
+  },
+  "scripts": {
+    "console": "babel-node --extensions \".ts\""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {}
 }
