@@ -1,4 +1,4 @@
-import LunarDate from '../LunarDate';
+import LunarDate from '../src/LunarDate';
 
 const FIXTURES = [
   { solarDate: [30, 10, 2014], timeZone: 7, lunarDate: [7, 9, 2014], isLeapMonth: true },
@@ -17,6 +17,11 @@ const FIXTURES = [
 
 describe('LunarDate', () => {
   it('should convert from solar dates correctly', () => {
-    expect(1).toEqual(2);
+    FIXTURES.forEach(({ solarDate, timeZone, lunarDate, isLeapMonth }) => {
+      const [day, month, year] = solarDate;
+      const lunar = LunarDate.fromSolarDate(day, month, year, timeZone);
+      expect(lunar.toArray()).toEqual(lunarDate);
+      expect(lunar.isLeapMonth).toEqual(isLeapMonth);
+    });
   });
 });

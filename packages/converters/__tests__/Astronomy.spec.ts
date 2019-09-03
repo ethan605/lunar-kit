@@ -1,4 +1,4 @@
-import Astronomy from '../Astronomy';
+import Astronomy from '../src/Astronomy';
 
 const FIXTURES = [
   { order: -1000, julianDays: 2385490, sunLong: 11 },

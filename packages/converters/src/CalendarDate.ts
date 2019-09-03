@@ -7,14 +7,14 @@ enum DateComparison {
 }
 
 export default class CalendarDate {
-  private day: number;
-  private month: number;
-  private year: number;
+  private _day: number;
+  private _month: number;
+  private _year: number;
 
   constructor(day: number, month: number, year: number) {
-    this.day = day;
-    this.month = month;
-    this.year = year;
+    this._day = day;
+    this._month = month;
+    this._year = year;
   }
 
   /**
@@ -44,16 +44,39 @@ export default class CalendarDate {
     return new CalendarDate(day, month, year);
   }
 
+  compareDate(day: number, month: number, year: number): DateComparison {
+    if (this._year > year) return DateComparison.After;
+    if (this._year < year) return DateComparison.Before;
+
+    // Same years
+    if (this._month > month) return DateComparison.After;
+    if (this._month < month) return DateComparison.Before;
+
+    // Same months
+    if (this._day > day) return DateComparison.After;
+    if (this._day < day) return DateComparison.Before;
+
+    return DateComparison.Equal;
+  }
+
+  isEqualDate(day: number, month: number, year: number): boolean {
+    return this.compareDate(day, month, year) === DateComparison.Equal;
+  }
+
+  toArray(): number[] {
+    return [this._day, this._month, this._year];
+  }
+
   /**
    * Calculate Julian days number of self
    * i.e., the number of days between 01/01/4713 BC (Julian calendar) and dd/mm/yyyy.
    * Formula at: https://www.tondering.dk/claus/cal/julperiod.php#formula
    */
   toJulianDays(): number {
-    const a = Math.floor((14 - this.month) / 12);
-    const y = this.year + 4800 - a;
-    const m = this.month + 12 * a - 3;
-    const cached = this.day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4);
+    const a = Math.floor((14 - this._month) / 12);
+    const y = this._year + 4800 - a;
+    const m = this._month + 12 * a - 3;
+    const cached = this._day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4);
 
     const julianDays = cached - Math.floor(y / 100) + Math.floor(y / 400) - 32045;
 
@@ -62,24 +85,5 @@ export default class CalendarDate {
 
     // Date in Julian calendar
     return cached - 32083;
-  }
-
-  isEqualDate(day: number, month: number, year: number): boolean {
-    return this.compareDate(day, month, year) === DateComparison.Equal;
-  }
-
-  private compareDate(day: number, month: number, year: number): DateComparison {
-    if (this.year > year) return DateComparison.After;
-    if (this.year < year) return DateComparison.Before;
-
-    // Same years
-    if (this.month > month) return DateComparison.After;
-    if (this.month < month) return DateComparison.Before;
-
-    // Same months
-    if (this.day > day) return DateComparison.After;
-    if (this.day < day) return DateComparison.Before;
-
-    return DateComparison.Equal;
   }
 }
