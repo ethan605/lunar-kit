@@ -4636,11 +4636,6 @@ type-check@~0.3.2:
   dependencies:
     prelude-ls "~1.1.2"
 
-typescript-bundle@^1.0.16:
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/typescript-bundle/-/typescript-bundle-1.0.16.tgz#2efed1b69ecc310ff39bcef356764aef676eff05"
-  integrity sha512-J0JXGjNNk32QOCRERYyQc99N5iZo5lcSiQJRELik5qHUS1xAe6H0ulqWX0UtUCWG9rvKBfMSD6EbuFLLKvDCqA==
-
 typescript@3.5.2:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.2.tgz#a09e1dc69bc9551cadf17dba10ee42cf55e5d56c"
