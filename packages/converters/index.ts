@@ -108,9 +108,7 @@ function calculateJuliusDayFromDate({ day, month, year }: BaseDate): number {
     Math.floor(y / 400) -
     32045;
 
-  if (jd < JULIUS_DAY_EPOCH + 1)
-    jd =
-      day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - 32083;
+  if (jd < JULIUS_DAY_EPOCH + 1) jd = day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - 32083;
   return jd;
 }
 
