@@ -10,7 +10,7 @@
     "directory": "packages/converters/dist"
   },
   "scripts": {
-    "build": "gulp build",
+    "build": "jest && gulp build",
     "console": "babel-node --extensions \".ts\"",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest"
@@ -20,6 +20,7 @@
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
+    "@types/gulp": "^4.0.6",
     "@types/jest": "^24.0.18",
     "@typescript-eslint/eslint-plugin": "^2.1.0",
     "@typescript-eslint/parser": "^2.1.0",
@@ -33,6 +34,7 @@
     "jest": "^24.9.0",
     "parcel-bundler": "^1.12.3",
     "prettier": "^1.18.2",
+    "ts-node": "^8.3.0",
     "typescript": "3.5.2"
   },
   "dependencies": {}
