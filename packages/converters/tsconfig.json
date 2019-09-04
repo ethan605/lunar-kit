@@ -8,5 +8,8 @@
   "include": [
     "index.ts",
     "src/**/*.ts"
+  ],
+  "exclude": [
+    "dist"
   ]
 }

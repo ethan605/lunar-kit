@@ -73,7 +73,6 @@ declare module '@lunar-kit/converters' {
 
   export class SexagenaryDateTime {
     constructor(hour: Sexagenary, day: Sexagenary, month: Sexagenary, year: Sexagenary);
-    toString(locale?: Locales): string;
     toObject(): SexagenaryDateTimeObject;
     toStringsObject(locale?: Locales): SexagenaryDateTimeStringsObject;
   }
