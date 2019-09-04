@@ -1,4 +1,18 @@
-import Sexagenary from './Sexagenary';
+import Sexagenary, { Locales } from './Sexagenary';
+
+interface SexagenaryDateTimeObject {
+  hour: Sexagenary;
+  day: Sexagenary;
+  month: Sexagenary;
+  year: Sexagenary;
+}
+
+interface SexagenaryDateTimeStringsObject {
+  hour: string;
+  day: string;
+  month: string;
+  year: string;
+}
 
 export default class SexagenaryDateTime {
   private _hour: Sexagenary;
@@ -13,12 +27,26 @@ export default class SexagenaryDateTime {
     this._year = year;
   }
 
-  get toObject(): { [key: string]: Sexagenary } {
+  toObject(): SexagenaryDateTimeObject {
     return {
       hour: this._hour,
       day: this._day,
       month: this._month,
       year: this._year,
     };
+  }
+
+  toStringsObject(locale: Locales = Locales.Default): SexagenaryDateTimeStringsObject {
+    return {
+      hour: this._hour.toString(locale),
+      day: this._day.toString(locale),
+      month: this._month.toString(locale),
+      year: this._year.toString(locale),
+    };
+  }
+
+  toString(locale: Locales = Locales.Default): string {
+    const strings = [this._hour, this._day, this._month, this._year].map(sexagenary => sexagenary.toString(locale));
+    return strings.join(', ');
   }
 }

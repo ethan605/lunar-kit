@@ -33,9 +33,30 @@ declare module '@lunar-kit/converters' {
     After = 1,
   }
 
-  export interface SexagenaryPair {
+  export enum Locales {
+    Default = 'default',
+    Ko = 'ko',
+    Vi = 'vi',
+    Zh = 'zh',
+  }
+
+  interface SexagenaryPair {
     stem: Stem;
     branch: Branch;
+  }
+
+  interface SexagenaryDateTimeObject {
+    hour: Sexagenary;
+    day: Sexagenary;
+    month: Sexagenary;
+    year: Sexagenary;
+  }
+
+  interface SexagenaryDateTimeStringsObject {
+    hour: string;
+    day: string;
+    month: string;
+    year: string;
   }
 
   class BaseDate {
@@ -47,18 +68,26 @@ declare module '@lunar-kit/converters' {
 
   export class Sexagenary {
     constructor({ stem, branch }: SexagenaryPair);
-    toString(locale?: string): string;
+    toString(locale?: Locales): string;
+  }
+
+  export class SexagenaryDateTime {
+    constructor(hour: Sexagenary, day: Sexagenary, month: Sexagenary, year: Sexagenary);
+    toString(locale?: Locales): string;
+    toObject(): SexagenaryDateTimeObject;
+    toStringsObject(locale?: Locales): SexagenaryDateTimeStringsObject;
   }
 
   export class SolarDate extends BaseDate {
     static fromJulianDays(julianDays: number): SolarDate;
     toJulianDays(): number;
     toLunarDate(timeZone: number): LunarDate;
-    toSexagenaries(timeZone: number, solarTime: number[]): { [key: string]: Sexagenary };
+    toSexagenaryDateTime(timeZone: number, solarTime: number[]): SexagenaryDateTime;
   }
 
   export class LunarDate extends BaseDate {
     readonly isLeapMonth: boolean;
     toSolarDate(timeZone: number): SolarDate;
+    toSexagenaryDateTime(timeZone: number, solarTime: number[]): SexagenaryDateTime;
   }
 }

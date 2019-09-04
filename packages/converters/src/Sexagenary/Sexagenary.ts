@@ -28,7 +28,14 @@ export enum Branch {
   Pig,
 }
 
-export interface SexagenaryPair {
+export enum Locales {
+  Default = 'default',
+  Ko = 'ko',
+  Vi = 'vi',
+  Zh = 'zh',
+}
+
+interface SexagenaryPair {
   stem: Stem;
   branch: Branch;
 }
@@ -50,14 +57,14 @@ export default class Sexagenary {
     return this._branch;
   }
 
-  toString(locale = 'default'): string {
+  toString(locale: Locales = Locales.Default): string {
     const { stems = null, branches = null } = LOCALES[locale] || {};
     if (stems == null || branches == null) return '';
 
     const stem = stems[this._stem];
     const branch = branches[this._branch];
 
-    if (locale === 'default') return [stem, branch].join('-');
+    if (locale === Locales.Default) return [stem, branch].join('-');
     return [stem, branch].join(' ');
   }
 }

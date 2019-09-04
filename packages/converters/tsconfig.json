@@ -3,11 +3,10 @@
   "compilerOptions": {
     "module": "commonjs",
     "noEmit": false,
-    "outDir": "ts-dist",
-    "resolveJsonModule": true
+    "outDir": "ts-dist"
   },
   "include": [
     "index.ts",
-    "src/*.ts", "src/Sexagenary/Sexagenary.ts"
+    "src/**/*.ts"
   ]
 }
