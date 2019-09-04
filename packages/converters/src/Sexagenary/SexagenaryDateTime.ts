@@ -44,9 +44,4 @@ export default class SexagenaryDateTime {
       year: this._year.toString(locale),
     };
   }
-
-  toString(locale: Locales = Locales.Default): string {
-    const strings = [this._hour, this._day, this._month, this._year].map(sexagenary => sexagenary.toString(locale));
-    return strings.join(', ');
-  }
 }

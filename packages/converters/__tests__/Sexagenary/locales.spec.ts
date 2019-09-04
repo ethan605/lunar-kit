@@ -18,9 +18,10 @@ describe('Sexagenary - locales', () => {
 
   it('should be converted from solar dates correctly', () => {
     sexagenaryDateTimes.forEach((sexagenaryDateTime, index) => {
-      const { hour, day, month, year } = sexagenaryDateTime.toObject();
       const { sexagenaries } = fixtures[index];
+      expect(sexagenaryDateTime.toStringsObject()).toEqual(sexagenaries.default);
 
+      const { hour, day, month, year } = sexagenaryDateTime.toObject();
       expect(hour.toString()).toEqual(sexagenaries.default.hour);
       expect(day.toString()).toEqual(sexagenaries.default.day);
       expect(month.toString()).toEqual(sexagenaries.default.month);
@@ -31,48 +32,29 @@ describe('Sexagenary - locales', () => {
   it('should be converted from lunar dates correctly', () => {
     fixtures.forEach(({ lunarDate, lunarLeap, solarTime, timeZone, sexagenaries }) => {
       const lunar = new LunarDate(lunarDate[0], lunarDate[1], lunarDate[2], lunarLeap);
-      const { hour, day, month, year } = lunar.toSexagenaryDateTime(timeZone, solarTime).toObject();
-
-      expect(hour.toString()).toEqual(sexagenaries.default.hour);
-      expect(day.toString()).toEqual(sexagenaries.default.day);
-      expect(month.toString()).toEqual(sexagenaries.default.month);
-      expect(year.toString()).toEqual(sexagenaries.default.year);
+      const sexagenaryDateTime = lunar.toSexagenaryDateTime(timeZone, solarTime);
+      expect(sexagenaryDateTime.toStringsObject()).toEqual(sexagenaries.default);
     });
   });
 
   it('should produce Korean localed strings correctly', () => {
     sexagenaryDateTimes.forEach((sexagenaryDateTime, index) => {
-      const { hour, day, month, year } = sexagenaryDateTime.toObject();
       const { sexagenaries } = fixtures[index];
-
-      expect(hour.toString(Locales.Ko)).toEqual(sexagenaries.ko.hour);
-      expect(day.toString(Locales.Ko)).toEqual(sexagenaries.ko.day);
-      expect(month.toString(Locales.Ko)).toEqual(sexagenaries.ko.month);
-      expect(year.toString(Locales.Ko)).toEqual(sexagenaries.ko.year);
+      expect(sexagenaryDateTime.toStringsObject(Locales.Ko)).toEqual(sexagenaries.ko);
     });
   });
 
   it('should produce Vietnamese localed strings correctly', () => {
     sexagenaryDateTimes.forEach((sexagenaryDateTime, index) => {
-      const { hour, day, month, year } = sexagenaryDateTime.toObject();
       const { sexagenaries } = fixtures[index];
-
-      expect(hour.toString(Locales.Vi)).toEqual(sexagenaries.vi.hour);
-      expect(day.toString(Locales.Vi)).toEqual(sexagenaries.vi.day);
-      expect(month.toString(Locales.Vi)).toEqual(sexagenaries.vi.month);
-      expect(year.toString(Locales.Vi)).toEqual(sexagenaries.vi.year);
+      expect(sexagenaryDateTime.toStringsObject(Locales.Vi)).toEqual(sexagenaries.vi);
     });
   });
 
   it('should produce Chinses localed strings correctly', () => {
     sexagenaryDateTimes.forEach((sexagenaryDateTime, index) => {
-      const { hour, day, month, year } = sexagenaryDateTime.toObject();
       const { sexagenaries } = fixtures[index];
-
-      expect(hour.toString(Locales.Zh)).toEqual(sexagenaries.zh.hour);
-      expect(day.toString(Locales.Zh)).toEqual(sexagenaries.zh.day);
-      expect(month.toString(Locales.Zh)).toEqual(sexagenaries.zh.month);
-      expect(year.toString(Locales.Zh)).toEqual(sexagenaries.zh.year);
+      expect(sexagenaryDateTime.toStringsObject(Locales.Zh)).toEqual(sexagenaries.zh);
     });
   });
 });

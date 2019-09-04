@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1567573664893" clover="3.2.0">
-  <project timestamp="1567573664893" name="All files">
-    <metrics statements="147" coveredstatements="142" conditionals="65" coveredconditionals="59" methods="25" coveredmethods="22" elements="237" coveredelements="223" complexity="0" loc="147" ncloc="147" packages="2" files="7" classes="7"/>
+<coverage generated="1567574044645" clover="3.2.0">
+  <project timestamp="1567574044646" name="All files">
+    <metrics statements="145" coveredstatements="143" conditionals="64" coveredconditionals="60" methods="23" coveredmethods="23" elements="232" coveredelements="226" complexity="0" loc="145" ncloc="145" packages="2" files="7" classes="7"/>
     <package name="src">
       <metrics statements="130" coveredstatements="128" conditionals="52" coveredconditionals="48" methods="17" coveredmethods="17"/>
       <file name="Astronomy.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/Astronomy.ts">
@@ -148,29 +148,27 @@
       </file>
     </package>
     <package name="src.Sexagenary">
-      <metrics statements="17" coveredstatements="14" conditionals="13" coveredconditionals="11" methods="8" coveredmethods="5"/>
+      <metrics statements="15" coveredstatements="15" conditionals="12" coveredconditionals="12" methods="6" coveredmethods="6"/>
       <file name="Sexagenary.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/Sexagenary/Sexagenary.ts">
         <metrics statements="9" coveredstatements="9" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
         <line num="48" count="109" type="stmt"/>
         <line num="49" count="109" type="stmt"/>
         <line num="53" count="36" type="stmt"/>
-        <line num="60" count="181" type="cond" truecount="4" falsecount="0"/>
-        <line num="61" count="181" type="cond" truecount="4" falsecount="0"/>
-        <line num="63" count="180" type="stmt"/>
-        <line num="64" count="180" type="stmt"/>
-        <line num="66" count="180" type="cond" truecount="2" falsecount="0"/>
+        <line num="60" count="217" type="cond" truecount="4" falsecount="0"/>
+        <line num="61" count="217" type="cond" truecount="4" falsecount="0"/>
+        <line num="63" count="216" type="stmt"/>
+        <line num="64" count="216" type="stmt"/>
+        <line num="66" count="216" type="cond" truecount="2" falsecount="0"/>
         <line num="67" count="108" type="stmt"/>
       </file>
       <file name="SexagenaryDateTime.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/Sexagenary/SexagenaryDateTime.ts">
-        <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="2"/>
+        <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
         <line num="24" count="27" type="stmt"/>
         <line num="25" count="27" type="stmt"/>
         <line num="26" count="27" type="stmt"/>
         <line num="27" count="27" type="stmt"/>
-        <line num="31" count="54" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
+        <line num="31" count="18" type="stmt"/>
+        <line num="40" count="45" type="stmt"/>
       </file>
       <file name="index.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/Sexagenary/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
