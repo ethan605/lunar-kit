@@ -2,7 +2,7 @@ import Astronomy from './Astronomy';
 import BaseDate from './BaseDate';
 import SolarDate from './SolarDate';
 
-import Sexagenary from './Sexagenary';
+import { Sexagenary } from './Sexagenary';
 
 export default class LunarDate extends BaseDate {
   private _isLeapMonth: boolean;

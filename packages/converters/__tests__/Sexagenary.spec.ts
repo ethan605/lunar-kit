@@ -1,5 +1,5 @@
 import SolarDate from '../src/SolarDate';
-import Sexagenary from '../src/Sexagenary';
+import { Sexagenary } from '../src/Sexagenary';
 
 // Fixtures
 import sexagenaryFixtures from './fixtures/sexagenaries.json';
