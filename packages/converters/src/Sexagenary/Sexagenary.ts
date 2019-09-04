@@ -49,12 +49,11 @@ export default class Sexagenary {
     this._branch = branch;
   }
 
-  get stem(): Stem {
-    return this._stem;
-  }
-
-  get branch(): Branch {
-    return this._branch;
+  toObject(): SexagenaryPair {
+    return {
+      stem: this._stem,
+      branch: this._branch,
+    };
   }
 
   toString(locale: Locales = Locales.Default): string {

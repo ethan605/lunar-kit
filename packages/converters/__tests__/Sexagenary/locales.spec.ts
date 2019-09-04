@@ -1,11 +1,12 @@
-import SolarDate from '../src/SolarDate';
-import { Sexagenary, Locales } from '../src/Sexagenary';
+import LunarDate from '../../src/LunarDate';
+import SolarDate from '../../src/SolarDate';
+import { Sexagenary, Locales } from '../../src/Sexagenary';
 
 // Fixtures
-import sexagenaryFixtures from './fixtures/sexagenaries.json';
+import fixtures from '../fixtures/sexagenaries/locales.json';
 
-describe('Sexagenary', () => {
-  const sexagenaryDateTimes = sexagenaryFixtures.map(({ solarDate, timeZone, solarTime }) => {
+describe('Sexagenary - locales', () => {
+  const sexagenaryDateTimes = fixtures.map(({ solarDate, timeZone, solarTime }) => {
     const solar = new SolarDate(solarDate[0], solarDate[1], solarDate[2]);
     return solar.toSexagenaryDateTime(timeZone, solarTime);
   });
@@ -18,7 +19,19 @@ describe('Sexagenary', () => {
   it('should be converted from solar dates correctly', () => {
     sexagenaryDateTimes.forEach((sexagenaryDateTime, index) => {
       const { hour, day, month, year } = sexagenaryDateTime.toObject();
-      const { sexagenaries } = sexagenaryFixtures[index];
+      const { sexagenaries } = fixtures[index];
+
+      expect(hour.toString()).toEqual(sexagenaries.default.hour);
+      expect(day.toString()).toEqual(sexagenaries.default.day);
+      expect(month.toString()).toEqual(sexagenaries.default.month);
+      expect(year.toString()).toEqual(sexagenaries.default.year);
+    });
+  });
+
+  it('should be converted from lunar dates correctly', () => {
+    fixtures.forEach(({ lunarDate, lunarLeap, solarTime, timeZone, sexagenaries }) => {
+      const lunar = new LunarDate(lunarDate[0], lunarDate[1], lunarDate[2], lunarLeap);
+      const { hour, day, month, year } = lunar.toSexagenaryDateTime(timeZone, solarTime).toObject();
 
       expect(hour.toString()).toEqual(sexagenaries.default.hour);
       expect(day.toString()).toEqual(sexagenaries.default.day);
@@ -30,7 +43,7 @@ describe('Sexagenary', () => {
   it('should produce Korean localed strings correctly', () => {
     sexagenaryDateTimes.forEach((sexagenaryDateTime, index) => {
       const { hour, day, month, year } = sexagenaryDateTime.toObject();
-      const { sexagenaries } = sexagenaryFixtures[index];
+      const { sexagenaries } = fixtures[index];
 
       expect(hour.toString(Locales.Ko)).toEqual(sexagenaries.ko.hour);
       expect(day.toString(Locales.Ko)).toEqual(sexagenaries.ko.day);
@@ -42,7 +55,7 @@ describe('Sexagenary', () => {
   it('should produce Vietnamese localed strings correctly', () => {
     sexagenaryDateTimes.forEach((sexagenaryDateTime, index) => {
       const { hour, day, month, year } = sexagenaryDateTime.toObject();
-      const { sexagenaries } = sexagenaryFixtures[index];
+      const { sexagenaries } = fixtures[index];
 
       expect(hour.toString(Locales.Vi)).toEqual(sexagenaries.vi.hour);
       expect(day.toString(Locales.Vi)).toEqual(sexagenaries.vi.day);
@@ -54,7 +67,7 @@ describe('Sexagenary', () => {
   it('should produce Chinses localed strings correctly', () => {
     sexagenaryDateTimes.forEach((sexagenaryDateTime, index) => {
       const { hour, day, month, year } = sexagenaryDateTime.toObject();
-      const { sexagenaries } = sexagenaryFixtures[index];
+      const { sexagenaries } = fixtures[index];
 
       expect(hour.toString(Locales.Zh)).toEqual(sexagenaries.zh.hour);
       expect(day.toString(Locales.Zh)).toEqual(sexagenaries.zh.day);

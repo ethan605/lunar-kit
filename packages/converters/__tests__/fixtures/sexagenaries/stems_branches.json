@@ -1,0 +1,326 @@
+[
+  {
+    "solarDate": [
+      5,
+      1,
+      1996
+    ],
+    "solarTime": [
+      7,
+      15
+    ],
+    "lunarDate": [
+      15,
+      11,
+      1995
+    ],
+    "lunarLeap": false,
+    "timeZone": 7,
+    "sexagenaries": {
+      "hour": {
+        "stem": 8,
+        "branch": 4
+      },
+      "day": {
+        "stem": 7,
+        "branch": 1
+      },
+      "month": {
+        "stem": 4,
+        "branch": 0
+      },
+      "year": {
+        "stem": 1,
+        "branch": 11
+      }
+    }
+  },
+  {
+    "solarDate": [
+      23,
+      12,
+      1994
+    ],
+    "solarTime": [
+      21,
+      5
+    ],
+    "lunarDate": [
+      21,
+      11,
+      1994
+    ],
+    "lunarLeap": false,
+    "timeZone": 7,
+    "sexagenaries": {
+      "hour": {
+        "stem": 9,
+        "branch": 11
+      },
+      "day": {
+        "stem": 9,
+        "branch": 7
+      },
+      "month": {
+        "stem": 2,
+        "branch": 0
+      },
+      "year": {
+        "stem": 0,
+        "branch": 10
+      }
+    }
+  },
+  {
+    "solarDate": [
+      25,
+      4,
+      1993
+    ],
+    "solarTime": [
+      17,
+      5
+    ],
+    "lunarDate": [
+      4,
+      3,
+      1993
+    ],
+    "lunarLeap": true,
+    "timeZone": 7,
+    "sexagenaries": {
+      "hour": {
+        "stem": 3,
+        "branch": 9
+      },
+      "day": {
+        "stem": 2,
+        "branch": 0
+      },
+      "month": {
+        "stem": 2,
+        "branch": 4
+      },
+      "year": {
+        "stem": 9,
+        "branch": 9
+      }
+    }
+  },
+  {
+    "solarDate": [
+      28,
+      6,
+      1994
+    ],
+    "solarTime": [
+      8,
+      35
+    ],
+    "lunarDate": [
+      20,
+      5,
+      1994
+    ],
+    "lunarLeap": false,
+    "timeZone": 7,
+    "sexagenaries": {
+      "hour": {
+        "stem": 6,
+        "branch": 4
+      },
+      "day": {
+        "stem": 1,
+        "branch": 9
+      },
+      "month": {
+        "stem": 6,
+        "branch": 6
+      },
+      "year": {
+        "stem": 0,
+        "branch": 10
+      }
+    }
+  },
+  {
+    "solarDate": [
+      21,
+      8,
+      1995
+    ],
+    "solarTime": [
+      7,
+      5
+    ],
+    "lunarDate": [
+      26,
+      7,
+      1995
+    ],
+    "lunarLeap": false,
+    "timeZone": 7,
+    "sexagenaries": {
+      "hour": {
+        "stem": 4,
+        "branch": 4
+      },
+      "day": {
+        "stem": 0,
+        "branch": 8
+      },
+      "month": {
+        "stem": 0,
+        "branch": 8
+      },
+      "year": {
+        "stem": 1,
+        "branch": 11
+      }
+    }
+  },
+  {
+    "solarDate": [
+      20,
+      2,
+      1992
+    ],
+    "solarTime": [
+      4,
+      0
+    ],
+    "lunarDate": [
+      17,
+      1,
+      1992
+    ],
+    "lunarLeap": false,
+    "timeZone": 7,
+    "sexagenaries": {
+      "hour": {
+        "stem": 6,
+        "branch": 2
+      },
+      "day": {
+        "stem": 2,
+        "branch": 2
+      },
+      "month": {
+        "stem": 8,
+        "branch": 2
+      },
+      "year": {
+        "stem": 8,
+        "branch": 8
+      }
+    }
+  },
+  {
+    "solarDate": [
+      11,
+      11,
+      1999
+    ],
+    "solarTime": [
+      22,
+      25
+    ],
+    "lunarDate": [
+      4,
+      10,
+      1999
+    ],
+    "lunarLeap": false,
+    "timeZone": 7,
+    "sexagenaries": {
+      "hour": {
+        "stem": 7,
+        "branch": 11
+      },
+      "day": {
+        "stem": 3,
+        "branch": 3
+      },
+      "month": {
+        "stem": 1,
+        "branch": 11
+      },
+      "year": {
+        "stem": 5,
+        "branch": 3
+      }
+    }
+  },
+  {
+    "solarDate": [
+      20,
+      12,
+      1973
+    ],
+    "solarTime": [
+      7,
+      0
+    ],
+    "lunarDate": [
+      26,
+      11,
+      1973
+    ],
+    "lunarLeap": false,
+    "timeZone": 7,
+    "sexagenaries": {
+      "hour": {
+        "stem": 6,
+        "branch": 4
+      },
+      "day": {
+        "stem": 6,
+        "branch": 2
+      },
+      "month": {
+        "stem": 0,
+        "branch": 0
+      },
+      "year": {
+        "stem": 9,
+        "branch": 1
+      }
+    }
+  },
+  {
+    "solarDate": [
+      10,
+      12,
+      1993
+    ],
+    "solarTime": [
+      21,
+      15
+    ],
+    "lunarDate": [
+      27,
+      10,
+      1993
+    ],
+    "lunarLeap": false,
+    "timeZone": 7,
+    "sexagenaries": {
+      "hour": {
+        "stem": 3,
+        "branch": 11
+      },
+      "day": {
+        "stem": 1,
+        "branch": 1
+      },
+      "month": {
+        "stem": 9,
+        "branch": 11
+      },
+      "year": {
+        "stem": 9,
+        "branch": 9
+      }
+    }
+  }
+]
