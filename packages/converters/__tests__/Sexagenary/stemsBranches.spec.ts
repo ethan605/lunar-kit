@@ -7,7 +7,7 @@ describe('Sexagenary - stems & branches', () => {
   it('should produce correct stem-branch pairs', () => {
     fixtures.forEach(({ solarDate, timeZone, sexagenaries }) => {
       const solar = new SolarDate(solarDate[0], solarDate[1], solarDate[2]);
-      const { startHour, day, month, year } = solar.toSexagenaryDateTime(timeZone).toObject();
+      const { startHour, day, month, year } = solar.toSexagenaryDate(timeZone).toObject();
 
       expect(startHour.toObject()).toEqual(sexagenaries.startHour);
       expect(day.toObject()).toEqual(sexagenaries.day);

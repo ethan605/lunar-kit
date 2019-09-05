@@ -1,2 +1,2 @@
 export { default as Sexagenary, Locales } from './Sexagenary';
-export { default as SexagenaryDateTime } from './SexagenaryDateTime';
+export { default as SexagenaryDate } from './SexagenaryDate';

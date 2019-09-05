@@ -2,7 +2,7 @@ import Astronomy from './Astronomy';
 import BaseDate from './BaseDate';
 import SolarDate from './SolarDate';
 
-import { Sexagenary, SexagenaryDateTime } from './Sexagenary';
+import { Sexagenary, SexagenaryDate } from './Sexagenary';
 
 export default class LunarDate extends BaseDate {
   private _isLeapMonth: boolean;
@@ -50,7 +50,7 @@ export default class LunarDate extends BaseDate {
     return SolarDate.fromJulianDays(monthStart + this._day - 1);
   }
 
-  toSexagenaryDateTime(timeZone: number): SexagenaryDateTime {
+  toSexagenaryDate(timeZone: number): SexagenaryDate {
     const julianDays = this.toSolarDate(timeZone).toJulianDays();
 
     const year = new Sexagenary({
@@ -73,6 +73,6 @@ export default class LunarDate extends BaseDate {
       branch: 0,
     });
 
-    return new SexagenaryDateTime(hour, day, month, year);
+    return new SexagenaryDate(hour, day, month, year);
   }
 }

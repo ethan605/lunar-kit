@@ -1,20 +1,20 @@
 import Sexagenary, { Locales } from './Sexagenary';
 
-interface SexagenaryDateTimeObject {
+interface SexagenaryDateObject {
   startHour: Sexagenary;
   day: Sexagenary;
   month: Sexagenary;
   year: Sexagenary;
 }
 
-interface SexagenaryDateTimeStringsObject {
+interface SexagenaryDateStringsObject {
   startHour: string;
   day: string;
   month: string;
   year: string;
 }
 
-export default class SexagenaryDateTime {
+export default class SexagenaryDate {
   private _startHour: Sexagenary;
   private _day: Sexagenary;
   private _month: Sexagenary;
@@ -27,7 +27,7 @@ export default class SexagenaryDateTime {
     this._year = year;
   }
 
-  toObject(): SexagenaryDateTimeObject {
+  toObject(): SexagenaryDateObject {
     return {
       startHour: this._startHour,
       day: this._day,
@@ -36,7 +36,7 @@ export default class SexagenaryDateTime {
     };
   }
 
-  toStringsObject(locale: Locales = Locales.Default): SexagenaryDateTimeStringsObject {
+  toStringsObject(locale: Locales = Locales.Default): SexagenaryDateStringsObject {
     return {
       startHour: this._startHour.toString(locale),
       day: this._day.toString(locale),
