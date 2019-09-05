@@ -6,9 +6,9 @@ import { Sexagenary, Locales } from '../../src/Sexagenary';
 import fixtures from '../fixtures/sexagenaries/locales.json';
 
 describe('Sexagenary - locales', () => {
-  const sexagenaryDateTimes = fixtures.map(({ solarDate, timeZone, solarTime }) => {
+  const sexagenaryDateTimes = fixtures.map(({ solarDate, timeZone }) => {
     const solar = new SolarDate(solarDate[0], solarDate[1], solarDate[2]);
-    return solar.toSexagenaryDateTime(timeZone, solarTime);
+    return solar.toSexagenaryDateTime(timeZone);
   });
 
   it('should handle invalid values correctly', () => {
@@ -21,8 +21,8 @@ describe('Sexagenary - locales', () => {
       const { sexagenaries } = fixtures[index];
       expect(sexagenaryDateTime.toStringsObject()).toEqual(sexagenaries.default);
 
-      const { hour, day, month, year } = sexagenaryDateTime.toObject();
-      expect(hour.toString()).toEqual(sexagenaries.default.hour);
+      const { startHour, day, month, year } = sexagenaryDateTime.toObject();
+      expect(startHour.toString()).toEqual(sexagenaries.default.startHour);
       expect(day.toString()).toEqual(sexagenaries.default.day);
       expect(month.toString()).toEqual(sexagenaries.default.month);
       expect(year.toString()).toEqual(sexagenaries.default.year);
@@ -30,9 +30,10 @@ describe('Sexagenary - locales', () => {
   });
 
   it('should be converted from lunar dates correctly', () => {
-    fixtures.forEach(({ lunarDate, lunarLeap, solarTime, timeZone, sexagenaries }) => {
-      const lunar = new LunarDate(lunarDate[0], lunarDate[1], lunarDate[2], lunarLeap);
-      const sexagenaryDateTime = lunar.toSexagenaryDateTime(timeZone, solarTime);
+    fixtures.forEach(({ lunarDate, lunarLeap, timeZone, sexagenaries }) => {
+      const [day, month, year] = lunarDate;
+      const lunar = new LunarDate(day, month, year, lunarLeap);
+      const sexagenaryDateTime = lunar.toSexagenaryDateTime(timeZone);
       expect(sexagenaryDateTime.toStringsObject()).toEqual(sexagenaries.default);
     });
   });

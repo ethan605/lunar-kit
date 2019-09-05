@@ -1,5 +1,6 @@
 {
   "default": {
+    "delimiter": "-",
     "stems": [
       "jia",
       "yi",
@@ -28,6 +29,7 @@
     ]
   },
   "ko": {
+    "delimiter": "",
     "stems": [
       "갑",
       "을",
@@ -56,6 +58,7 @@
     ]
   },
   "vi": {
+    "delimiter": " ",
     "stems": [
       "Giáp",
       "Ất",
@@ -84,6 +87,7 @@
     ]
   },
   "zh": {
+    "delimiter": "",
     "stems": [
       "甲",
       "乙",

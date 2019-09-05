@@ -50,7 +50,7 @@ export default class LunarDate extends BaseDate {
     return SolarDate.fromJulianDays(monthStart + this._day - 1);
   }
 
-  toSexagenaryDateTime(timeZone: number, solarTime: number[]): SexagenaryDateTime {
+  toSexagenaryDateTime(timeZone: number): SexagenaryDateTime {
     const julianDays = this.toSolarDate(timeZone).toJulianDays();
 
     const year = new Sexagenary({
@@ -68,12 +68,9 @@ export default class LunarDate extends BaseDate {
       branch: (julianDays + 1) % 12,
     });
 
-    const [solarHour, solarMinute] = solarTime;
-    const lunarHour = Math.floor(((solarHour + solarMinute / 60 + 1) % 24) / 2);
-
     const hour = new Sexagenary({
-      stem: (((julianDays + 9) % 5) * 2 + lunarHour) % 10,
-      branch: lunarHour,
+      stem: (((julianDays + 9) % 5) * 2) % 10,
+      branch: 0,
     });
 
     return new SexagenaryDateTime(hour, day, month, year);

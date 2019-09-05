@@ -91,8 +91,8 @@ export default class SolarDate extends BaseDate {
     return new LunarDate(lunarDay, lunarMonth, lunarYear, isLeapMonth);
   }
 
-  toSexagenaryDateTime(timeZone: number, solarTime: number[]): SexagenaryDateTime {
+  toSexagenaryDateTime(timeZone: number): SexagenaryDateTime {
     const lunarDate = this.toLunarDate(timeZone);
-    return lunarDate.toSexagenaryDateTime(timeZone, solarTime);
+    return lunarDate.toSexagenaryDateTime(timeZone);
   }
 }

@@ -5,11 +5,11 @@ import fixtures from '../fixtures/sexagenaries/stems_branches.json';
 
 describe('Sexagenary - stems & branches', () => {
   it('should produce correct stem-branch pairs', () => {
-    fixtures.forEach(({ solarDate, solarTime, timeZone, sexagenaries }) => {
+    fixtures.forEach(({ solarDate, timeZone, sexagenaries }) => {
       const solar = new SolarDate(solarDate[0], solarDate[1], solarDate[2]);
-      const { hour, day, month, year } = solar.toSexagenaryDateTime(timeZone, solarTime).toObject();
+      const { startHour, day, month, year } = solar.toSexagenaryDateTime(timeZone).toObject();
 
-      expect(hour.toObject()).toEqual(sexagenaries.hour);
+      expect(startHour.toObject()).toEqual(sexagenaries.startHour);
       expect(day.toObject()).toEqual(sexagenaries.day);
       expect(month.toObject()).toEqual(sexagenaries.month);
       expect(year.toObject()).toEqual(sexagenaries.year);

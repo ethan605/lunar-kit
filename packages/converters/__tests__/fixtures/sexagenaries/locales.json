@@ -5,10 +5,6 @@
       1,
       1996
     ],
-    "solarTime": [
-      7,
-      15
-    ],
     "lunarDate": [
       15,
       11,
@@ -18,28 +14,28 @@
     "timeZone": 7,
     "sexagenaries": {
       "default": {
-        "hour": "ren-dragon",
+        "startHour": "wu-rat",
         "day": "xin-ox",
         "month": "wu-rat",
         "year": "yi-pig"
       },
       "ko": {
-        "hour": "임 진",
-        "day": "신 축",
-        "month": "무 자",
-        "year": "을 해"
+        "startHour": "무자",
+        "day": "신축",
+        "month": "무자",
+        "year": "을해"
       },
       "vi": {
-        "hour": "Nhâm Thìn",
+        "startHour": "Mậu Tý",
         "day": "Tân Sửu",
         "month": "Mậu Tý",
         "year": "Ất Hợi"
       },
       "zh": {
-        "hour": "壬 辰",
-        "day": "辛 丑",
-        "month": "戊 子",
-        "year": "乙 亥"
+        "startHour": "戊子",
+        "day": "辛丑",
+        "month": "戊子",
+        "year": "乙亥"
       }
     }
   },
@@ -48,10 +44,6 @@
       23,
       12,
       1994
-    ],
-    "solarTime": [
-      21,
-      5
     ],
     "lunarDate": [
       21,
@@ -62,28 +54,28 @@
     "timeZone": 7,
     "sexagenaries": {
       "default": {
-        "hour": "gui-pig",
+        "startHour": "ren-rat",
         "day": "gui-goat",
         "month": "bing-rat",
         "year": "jia-dog"
       },
       "ko": {
-        "hour": "계 해",
-        "day": "계 미",
-        "month": "병 자",
-        "year": "갑 술"
+        "startHour": "임자",
+        "day": "계미",
+        "month": "병자",
+        "year": "갑술"
       },
       "vi": {
-        "hour": "Quý Hợi",
+        "startHour": "Nhâm Tý",
         "day": "Quý Mùi",
         "month": "Bính Tý",
         "year": "Giáp Tuất"
       },
       "zh": {
-        "hour": "癸 亥",
-        "day": "癸 未",
-        "month": "丙 子",
-        "year": "甲 戌"
+        "startHour": "壬子",
+        "day": "癸未",
+        "month": "丙子",
+        "year": "甲戌"
       }
     }
   },
@@ -92,10 +84,6 @@
       25,
       4,
       1993
-    ],
-    "solarTime": [
-      17,
-      5
     ],
     "lunarDate": [
       4,
@@ -106,28 +94,28 @@
     "timeZone": 7,
     "sexagenaries": {
       "default": {
-        "hour": "ding-rooster",
+        "startHour": "wu-rat",
         "day": "bing-rat",
         "month": "bing-dragon",
         "year": "gui-rooster"
       },
       "ko": {
-        "hour": "정 유",
-        "day": "병 자",
-        "month": "병 진",
-        "year": "계 유"
+        "startHour": "무자",
+        "day": "병자",
+        "month": "병진",
+        "year": "계유"
       },
       "vi": {
-        "hour": "Đinh Dậu",
+        "startHour": "Mậu Tý",
         "day": "Bính Tý",
         "month": "Bính Thìn",
         "year": "Quý Dậu"
       },
       "zh": {
-        "hour": "丁 酉",
-        "day": "丙 子",
-        "month": "丙 辰",
-        "year": "癸 酉"
+        "startHour": "戊子",
+        "day": "丙子",
+        "month": "丙辰",
+        "year": "癸酉"
       }
     }
   },
@@ -136,10 +124,6 @@
       28,
       6,
       1994
-    ],
-    "solarTime": [
-      8,
-      35
     ],
     "lunarDate": [
       20,
@@ -150,28 +134,28 @@
     "timeZone": 7,
     "sexagenaries": {
       "default": {
-        "hour": "geng-dragon",
+        "startHour": "bing-rat",
         "day": "yi-rooster",
         "month": "geng-horse",
         "year": "jia-dog"
       },
       "ko": {
-        "hour": "경 진",
-        "day": "을 유",
-        "month": "경 오",
-        "year": "갑 술"
+        "startHour": "병자",
+        "day": "을유",
+        "month": "경오",
+        "year": "갑술"
       },
       "vi": {
-        "hour": "Canh Thìn",
+        "startHour": "Bính Tý",
         "day": "Ất Dậu",
         "month": "Canh Ngọ",
         "year": "Giáp Tuất"
       },
       "zh": {
-        "hour": "庚 辰",
-        "day": "乙 酉",
-        "month": "庚 午",
-        "year": "甲 戌"
+        "startHour": "丙子",
+        "day": "乙酉",
+        "month": "庚午",
+        "year": "甲戌"
       }
     }
   },
@@ -180,10 +164,6 @@
       21,
       8,
       1995
-    ],
-    "solarTime": [
-      7,
-      5
     ],
     "lunarDate": [
       26,
@@ -194,28 +174,28 @@
     "timeZone": 7,
     "sexagenaries": {
       "default": {
-        "hour": "wu-dragon",
+        "startHour": "jia-rat",
         "day": "jia-monkey",
         "month": "jia-monkey",
         "year": "yi-pig"
       },
       "ko": {
-        "hour": "무 진",
-        "day": "갑 신",
-        "month": "갑 신",
-        "year": "을 해"
+        "startHour": "갑자",
+        "day": "갑신",
+        "month": "갑신",
+        "year": "을해"
       },
       "vi": {
-        "hour": "Mậu Thìn",
+        "startHour": "Giáp Tý",
         "day": "Giáp Thân",
         "month": "Giáp Thân",
         "year": "Ất Hợi"
       },
       "zh": {
-        "hour": "戊 辰",
-        "day": "甲 申",
-        "month": "甲 申",
-        "year": "乙 亥"
+        "startHour": "甲子",
+        "day": "甲申",
+        "month": "甲申",
+        "year": "乙亥"
       }
     }
   },
@@ -224,10 +204,6 @@
       20,
       2,
       1992
-    ],
-    "solarTime": [
-      4,
-      0
     ],
     "lunarDate": [
       17,
@@ -238,28 +214,28 @@
     "timeZone": 7,
     "sexagenaries": {
       "default": {
-        "hour": "geng-tiger",
+        "startHour": "wu-rat",
         "day": "bing-tiger",
         "month": "ren-tiger",
         "year": "ren-monkey"
       },
       "ko": {
-        "hour": "경 인",
-        "day": "병 인",
-        "month": "임 인",
-        "year": "임 신"
+        "startHour": "무자",
+        "day": "병인",
+        "month": "임인",
+        "year": "임신"
       },
       "vi": {
-        "hour": "Canh Dần",
+        "startHour": "Mậu Tý",
         "day": "Bính Dần",
         "month": "Nhâm Dần",
         "year": "Nhâm Thân"
       },
       "zh": {
-        "hour": "庚 寅",
-        "day": "丙 寅",
-        "month": "壬 寅",
-        "year": "壬 申"
+        "startHour": "戊子",
+        "day": "丙寅",
+        "month": "壬寅",
+        "year": "壬申"
       }
     }
   },
@@ -268,10 +244,6 @@
       11,
       11,
       1999
-    ],
-    "solarTime": [
-      22,
-      25
     ],
     "lunarDate": [
       4,
@@ -282,28 +254,28 @@
     "timeZone": 7,
     "sexagenaries": {
       "default": {
-        "hour": "xin-pig",
+        "startHour": "geng-rat",
         "day": "ding-rabbit",
         "month": "yi-pig",
         "year": "ji-rabbit"
       },
       "ko": {
-        "hour": "신 해",
-        "day": "정 묘",
-        "month": "을 해",
-        "year": "기 묘"
+        "startHour": "경자",
+        "day": "정묘",
+        "month": "을해",
+        "year": "기묘"
       },
       "vi": {
-        "hour": "Tân Hợi",
+        "startHour": "Canh Tý",
         "day": "Đinh Mão",
         "month": "Ất Hợi",
         "year": "Kỷ Mão"
       },
       "zh": {
-        "hour": "辛 亥",
-        "day": "丁 卯",
-        "month": "乙 亥",
-        "year": "己 卯"
+        "startHour": "庚子",
+        "day": "丁卯",
+        "month": "乙亥",
+        "year": "己卯"
       }
     }
   },
@@ -312,10 +284,6 @@
       20,
       12,
       1973
-    ],
-    "solarTime": [
-      7,
-      0
     ],
     "lunarDate": [
       26,
@@ -326,28 +294,28 @@
     "timeZone": 7,
     "sexagenaries": {
       "default": {
-        "hour": "geng-dragon",
+        "startHour": "bing-rat",
         "day": "geng-tiger",
         "month": "jia-rat",
         "year": "gui-ox"
       },
       "ko": {
-        "hour": "경 진",
-        "day": "경 인",
-        "month": "갑 자",
-        "year": "계 축"
+        "startHour": "병자",
+        "day": "경인",
+        "month": "갑자",
+        "year": "계축"
       },
       "vi": {
-        "hour": "Canh Thìn",
+        "startHour": "Bính Tý",
         "day": "Canh Dần",
         "month": "Giáp Tý",
         "year": "Quý Sửu"
       },
       "zh": {
-        "hour": "庚 辰",
-        "day": "庚 寅",
-        "month": "甲 子",
-        "year": "癸 丑"
+        "startHour": "丙子",
+        "day": "庚寅",
+        "month": "甲子",
+        "year": "癸丑"
       }
     }
   },
@@ -356,10 +324,6 @@
       10,
       12,
       1993
-    ],
-    "solarTime": [
-      21,
-      15
     ],
     "lunarDate": [
       27,
@@ -370,28 +334,28 @@
     "timeZone": 7,
     "sexagenaries": {
       "default": {
-        "hour": "ding-pig",
+        "startHour": "bing-rat",
         "day": "yi-ox",
         "month": "gui-pig",
         "year": "gui-rooster"
       },
       "ko": {
-        "hour": "정 해",
-        "day": "을 축",
-        "month": "계 해",
-        "year": "계 유"
+        "startHour": "병자",
+        "day": "을축",
+        "month": "계해",
+        "year": "계유"
       },
       "vi": {
-        "hour": "Đinh Hợi",
+        "startHour": "Bính Tý",
         "day": "Ất Sửu",
         "month": "Quý Hợi",
         "year": "Quý Dậu"
       },
       "zh": {
-        "hour": "丁 亥",
-        "day": "乙 丑",
-        "month": "癸 亥",
-        "year": "癸 酉"
+        "startHour": "丙子",
+        "day": "乙丑",
+        "month": "癸亥",
+        "year": "癸酉"
       }
     }
   }
