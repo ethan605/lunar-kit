@@ -40,6 +40,20 @@ interface SexagenaryPair {
   branch: Branch;
 }
 
+/**
+ * Calculate the absolute modulo value of two numbers.
+ * Noted that dividend could be negative, but the results will always be non-negative
+ *
+ * @param {number} dividend
+ * @param {number} divisor
+ * @returns {number}
+ */
+const absModulo = (dividend: number, divisor: number): number => {
+  const modulo = dividend % divisor;
+  if (modulo >= 0) return Math.abs(modulo);
+  return modulo + divisor;
+};
+
 export default class Sexagenary {
   private _stem: Stem;
   private _branch: Branch;
@@ -47,6 +61,12 @@ export default class Sexagenary {
   constructor({ stem, branch }: SexagenaryPair) {
     this._stem = stem;
     this._branch = branch;
+  }
+
+  add(diff: number): Sexagenary {
+    const stem = absModulo(this._stem + diff, 10);
+    const branch = absModulo(this._branch + diff, 12);
+    return new Sexagenary({ stem, branch });
   }
 
   toObject(): SexagenaryPair {
