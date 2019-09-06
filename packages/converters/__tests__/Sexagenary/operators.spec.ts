@@ -4,18 +4,20 @@ import { Sexagenary } from '../../src/Sexagenary';
 import fixtures from '../fixtures/sexagenaries/operators.json';
 
 describe('Sexagenary - operators', () => {
-  it('should always create new instance', () => {
-    const [{ input }] = fixtures;
-    const sexagenary = new Sexagenary(input);
-    const otherSexagenary = sexagenary;
-    expect(otherSexagenary).toBe(sexagenary);
-    expect(sexagenary.add(1)).not.toBe(sexagenary);
-  });
-
-  it('should add correctly', () => {
-    fixtures.forEach(({ add, input, output }) => {
+  describe('.add()', () => {
+    it('should always create new instance', () => {
+      const { input } = fixtures[0]; // Test on first fixture only
       const sexagenary = new Sexagenary(input);
-      if (add != null) expect(sexagenary.add(add)).toEqual(output);
+
+      expect(sexagenary.add(0)).not.toBe(sexagenary);
+      expect(sexagenary.add(1)).not.toBe(sexagenary);
+    });
+
+    it('should calculate correctly', () => {
+      fixtures.forEach(({ add, input, output }) => {
+        const sexagenary = new Sexagenary(input);
+        if (add != null) expect(sexagenary.add(add)).toEqual(output);
+      });
     });
   });
 });
