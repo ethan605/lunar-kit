@@ -35,7 +35,7 @@ export enum Locales {
   Zh = 'zh',
 }
 
-interface SexagenaryPair {
+interface SexagenaryParams {
   stem: Stem;
   branch: Branch;
 }
@@ -55,33 +55,26 @@ const absModulo = (dividend: number, divisor: number): number => {
 };
 
 export default class Sexagenary {
-  private _stem: Stem;
-  private _branch: Branch;
+  readonly stem: Stem;
+  readonly branch: Branch;
 
-  constructor({ stem, branch }: SexagenaryPair) {
-    this._stem = stem;
-    this._branch = branch;
+  constructor({ stem, branch }: SexagenaryParams) {
+    this.stem = stem;
+    this.branch = branch;
   }
 
   add(diff: number): Sexagenary {
-    const stem = absModulo(this._stem + diff, 10);
-    const branch = absModulo(this._branch + diff, 12);
+    const stem = absModulo(this.stem + diff, 10);
+    const branch = absModulo(this.branch + diff, 12);
     return new Sexagenary({ stem, branch });
-  }
-
-  toObject(): SexagenaryPair {
-    return {
-      stem: this._stem,
-      branch: this._branch,
-    };
   }
 
   toString(locale: Locales = Locales.Default): string {
     const { delimiter, stems = null, branches = null } = LOCALES[locale] || {};
     if (stems == null || branches == null) return '';
 
-    const stem = stems[this._stem];
-    const branch = branches[this._branch];
+    const stem = stems[this.stem];
+    const branch = branches[this.branch];
     return [stem, branch].join(delimiter);
   }
 }

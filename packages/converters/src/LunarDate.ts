@@ -1,36 +1,35 @@
 import Astronomy from './Astronomy';
-import BaseDate from './BaseDate';
+import BaseDate, { BaseDateParams } from './BaseDate';
 import SolarDate from './SolarDate';
-
 import { Sexagenary, SexagenaryDate } from './Sexagenary';
 
+interface LunarDateParams extends BaseDateParams {
+  isLeapMonth: boolean;
+}
+
 export default class LunarDate extends BaseDate {
-  private _isLeapMonth: boolean;
+  readonly isLeapMonth: boolean;
 
-  constructor(day: number, month: number, year: number, isLeapMonth: boolean) {
-    super(day, month, year);
-    this._isLeapMonth = isLeapMonth;
-  }
-
-  get isLeapMonth(): boolean {
-    return this._isLeapMonth;
+  constructor({ day, month, year, isLeapMonth }: LunarDateParams) {
+    super({ day, month, year });
+    this.isLeapMonth = isLeapMonth;
   }
 
   toSolarDate(timeZone: number): SolarDate {
-    const astronomy = new Astronomy(timeZone);
+    const astronomy = new Astronomy({ timeZone });
 
     let a11 = 0;
     let b11 = 0;
     let offset = 0;
 
-    if (this._month < 11) {
-      a11 = astronomy.getLunarMonth11(this._year - 1);
-      b11 = astronomy.getLunarMonth11(this._year);
-      offset = this._month + 1;
+    if (this.month < 11) {
+      a11 = astronomy.getLunarMonth11(this.year - 1);
+      b11 = astronomy.getLunarMonth11(this.year);
+      offset = this.month + 1;
     } else {
-      a11 = astronomy.getLunarMonth11(this._year);
-      b11 = astronomy.getLunarMonth11(this._year + 1);
-      offset = this._month - 11;
+      a11 = astronomy.getLunarMonth11(this.year);
+      b11 = astronomy.getLunarMonth11(this.year + 1);
+      offset = this.month - 11;
     }
 
     const newMoonOrder = Math.floor(0.5 + (a11 - 2415021.076998695) / 29.530588853);
@@ -42,25 +41,25 @@ export default class LunarDate extends BaseDate {
       leapOffset = astronomy.getLeapMonthOffset(a11);
       leapMonth = leapOffset - 2;
       if (leapMonth < 0) leapMonth += 12;
-      if (this._isLeapMonth && this._month != leapMonth) return new SolarDate(0, 0, 0);
-      if (this._isLeapMonth || offset >= leapOffset) offset += 1;
+      if (this.isLeapMonth && this.month != leapMonth) return new SolarDate({ day: 0, month: 0, year: 0 });
+      if (this.isLeapMonth || offset >= leapOffset) offset += 1;
     }
 
     const monthStart = astronomy.getNewMoonDay(newMoonOrder + offset);
-    return SolarDate.fromJulianDays(monthStart + this._day - 1);
+    return SolarDate.fromJulianDays(monthStart + this.day - 1);
   }
 
   toSexagenaryDate(timeZone: number): SexagenaryDate {
     const julianDays = this.toSolarDate(timeZone).toJulianDays();
 
     const year = new Sexagenary({
-      stem: (this._year + 6) % 10,
-      branch: (this._year + 8) % 12,
+      stem: (this.year + 6) % 10,
+      branch: (this.year + 8) % 12,
     });
 
     const month = new Sexagenary({
-      stem: (this._year * 12 + this._month + 3) % 10,
-      branch: (this._month + 1) % 12,
+      stem: (this.year * 12 + this.month + 3) % 10,
+      branch: (this.month + 1) % 12,
     });
 
     const day = new Sexagenary({
@@ -68,11 +67,11 @@ export default class LunarDate extends BaseDate {
       branch: (julianDays + 1) % 12,
     });
 
-    const hour = new Sexagenary({
+    const startHour = new Sexagenary({
       stem: (((julianDays + 9) % 5) * 2) % 10,
       branch: 0,
     });
 
-    return new SexagenaryDate(hour, day, month, year);
+    return new SexagenaryDate({ startHour, day, month, year });
   }
 }

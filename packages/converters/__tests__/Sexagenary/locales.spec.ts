@@ -7,7 +7,8 @@ import fixtures from '../fixtures/sexagenaries/locales.json';
 
 describe('Sexagenary - locales', () => {
   const sexagenaryDateTimes = fixtures.map(({ solarDate, timeZone }) => {
-    const solar = new SolarDate(solarDate[0], solarDate[1], solarDate[2]);
+    const [day, month, year] = solarDate;
+    const solar = new SolarDate({ day, month, year });
     return solar.toSexagenaryDate(timeZone);
   });
 
@@ -21,7 +22,7 @@ describe('Sexagenary - locales', () => {
       const { sexagenaries } = fixtures[index];
       expect(sexagenaryDateTime.toStringsObject()).toEqual(sexagenaries.default);
 
-      const { startHour, day, month, year } = sexagenaryDateTime.toObject();
+      const { startHour, day, month, year } = sexagenaryDateTime;
       expect(startHour.toString()).toEqual(sexagenaries.default.startHour);
       expect(day.toString()).toEqual(sexagenaries.default.day);
       expect(month.toString()).toEqual(sexagenaries.default.month);
@@ -32,7 +33,7 @@ describe('Sexagenary - locales', () => {
   it('should be converted from lunar dates correctly', () => {
     fixtures.forEach(({ lunarDate, lunarLeap, timeZone, sexagenaries }) => {
       const [day, month, year] = lunarDate;
-      const lunar = new LunarDate(day, month, year, lunarLeap);
+      const lunar = new LunarDate({ day, month, year, isLeapMonth: lunarLeap });
       const sexagenaryDateTime = lunar.toSexagenaryDate(timeZone);
       expect(sexagenaryDateTime.toStringsObject()).toEqual(sexagenaries.default);
     });

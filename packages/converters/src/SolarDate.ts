@@ -30,7 +30,7 @@ export default class SolarDate extends BaseDate {
     const day = e - Math.floor((153 * m + 2) / 5) + 1;
     const month = m + 3 - 12 * Math.floor(m / 10);
     const year = b * 100 + d - 4800 + Math.floor(m / 10);
-    return new SolarDate(day, month, year);
+    return new SolarDate({ day, month, year });
   }
 
   /**
@@ -39,10 +39,10 @@ export default class SolarDate extends BaseDate {
    * Formula at: https://www.tondering.dk/claus/cal/julperiod.php#formula
    */
   toJulianDays(): number {
-    const a = Math.floor((14 - this._month) / 12);
-    const y = this._year + 4800 - a;
-    const m = this._month + 12 * a - 3;
-    const cached = this._day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4);
+    const a = Math.floor((14 - this.month) / 12);
+    const y = this.year + 4800 - a;
+    const m = this.month + 12 * a - 3;
+    const cached = this.day + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4);
 
     const julianDays = cached - Math.floor(y / 100) + Math.floor(y / 400) - 32045;
 
@@ -55,40 +55,40 @@ export default class SolarDate extends BaseDate {
 
   toLunarDate(timeZone: number): LunarDate {
     const julianDays = this.toJulianDays();
-    const astronomy = new Astronomy(timeZone);
+    const astronomy = new Astronomy({ timeZone });
 
     const newMoon = Math.floor((julianDays - 2415021.076998695) / 29.530588853);
     let monthStart = astronomy.getNewMoonDay(newMoon + 1);
     if (monthStart > julianDays) monthStart = astronomy.getNewMoonDay(newMoon);
 
-    let a11 = astronomy.getLunarMonth11(this._year);
+    let a11 = astronomy.getLunarMonth11(this.year);
     let b11 = a11;
-    let lunarYear = this._year;
+    let year = this.year;
 
     if (a11 >= monthStart) {
-      a11 = astronomy.getLunarMonth11(this._year - 1);
+      a11 = astronomy.getLunarMonth11(this.year - 1);
     } else {
-      lunarYear = this._year + 1;
-      b11 = astronomy.getLunarMonth11(this._year + 1);
+      year = this.year + 1;
+      b11 = astronomy.getLunarMonth11(this.year + 1);
     }
 
-    const lunarDay = julianDays - monthStart + 1;
+    const day = julianDays - monthStart + 1;
     const diff = Math.floor((monthStart - a11) / 29);
     let isLeapMonth = false;
-    let lunarMonth = diff + 11;
+    let month = diff + 11;
 
     if (b11 - a11 > 365) {
       const leapMonthDiff = astronomy.getLeapMonthOffset(a11);
 
       if (diff >= leapMonthDiff) {
-        lunarMonth = diff + 10;
+        month = diff + 10;
         if (diff == leapMonthDiff) isLeapMonth = true;
       }
     }
 
-    if (lunarMonth > 12) lunarMonth = lunarMonth - 12;
-    if (lunarMonth >= 11 && diff < 4) lunarYear -= 1;
-    return new LunarDate(lunarDay, lunarMonth, lunarYear, isLeapMonth);
+    if (month > 12) month = month - 12;
+    if (month >= 11 && diff < 4) year -= 1;
+    return new LunarDate({ day, month, year, isLeapMonth });
   }
 
   toSexagenaryDate(timeZone: number): SexagenaryDate {

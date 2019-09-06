@@ -5,7 +5,7 @@ import lunarMonthFixtures from './fixtures/astronomy/lunar_months.json';
 import newMoonFixtures from './fixtures/astronomy/new_moons.json';
 
 describe('Astronomy', () => {
-  const astronomy = new Astronomy(7); // Astronomy setup for UTC+07:00
+  const astronomy = new Astronomy({ timeZone: 7 }); // Astronomy setup for UTC+07:00
 
   it('should compute new moon days correctly', () => {
     newMoonFixtures.forEach(({ order, julianDays }) => {

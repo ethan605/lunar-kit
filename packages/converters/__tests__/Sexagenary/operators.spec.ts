@@ -15,7 +15,7 @@ describe('Sexagenary - operators', () => {
   it('should add/subtract correctly', () => {
     fixtures.forEach(({ add, input, output }) => {
       const sexagenary = new Sexagenary(input);
-      expect(sexagenary.add(add).toObject()).toEqual(output);
+      expect(sexagenary.add(add)).toEqual(output);
     });
   });
 });
