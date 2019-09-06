@@ -1,6 +1,6 @@
 import SolarDate from './SolarDate';
 
-interface AstronomyParams {
+export interface AstronomyParams {
   timeZone: number;
 }
 

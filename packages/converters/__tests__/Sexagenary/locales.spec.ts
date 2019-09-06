@@ -9,7 +9,7 @@ describe('Sexagenary - locales', () => {
   const sexagenaryDateTimes = fixtures.map(({ solarDate, timeZone }) => {
     const [day, month, year] = solarDate;
     const solar = new SolarDate({ day, month, year });
-    return solar.toSexagenaryDate(timeZone);
+    return solar.toSexagenaryDate({ timeZone });
   });
 
   it('should handle invalid values correctly', () => {
@@ -34,7 +34,7 @@ describe('Sexagenary - locales', () => {
     fixtures.forEach(({ lunarDate, lunarLeap, timeZone, sexagenaries }) => {
       const [day, month, year] = lunarDate;
       const lunar = new LunarDate({ day, month, year, isLeapMonth: lunarLeap });
-      const sexagenaryDateTime = lunar.toSexagenaryDate(timeZone);
+      const sexagenaryDateTime = lunar.toSexagenaryDate({ timeZone });
       expect(sexagenaryDateTime.toStringsObject()).toEqual(sexagenaries.default);
     });
   });

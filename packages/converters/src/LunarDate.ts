@@ -1,4 +1,4 @@
-import Astronomy from './Astronomy';
+import Astronomy, { AstronomyParams } from './Astronomy';
 import BaseDate, { BaseDateParams } from './BaseDate';
 import SolarDate from './SolarDate';
 import { Sexagenary, SexagenaryDate } from './Sexagenary';
@@ -49,7 +49,7 @@ export default class LunarDate extends BaseDate {
     return SolarDate.fromJulianDays(monthStart + this.day - 1);
   }
 
-  toSexagenaryDate(timeZone: number): SexagenaryDate {
+  toSexagenaryDate({ timeZone }: AstronomyParams): SexagenaryDate {
     const julianDays = this.toSolarDate(timeZone).toJulianDays();
 
     const year = new Sexagenary({
