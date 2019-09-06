@@ -33,6 +33,7 @@ export default class BaseDate {
     if (this.day > day) return DateComparison.After;
     if (this.day < day) return DateComparison.Before;
 
+    // Same day
     return DateComparison.Equal;
   }
 

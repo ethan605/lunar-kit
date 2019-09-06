@@ -12,10 +12,10 @@ describe('Sexagenary - operators', () => {
     expect(sexagenary.add(1)).not.toBe(sexagenary);
   });
 
-  it('should add/subtract correctly', () => {
+  it('should add correctly', () => {
     fixtures.forEach(({ add, input, output }) => {
       const sexagenary = new Sexagenary(input);
-      expect(sexagenary.add(add)).toEqual(output);
+      if (add != null) expect(sexagenary.add(add)).toEqual(output);
     });
   });
 });

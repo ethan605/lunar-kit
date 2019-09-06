@@ -1,97 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1567700854312" clover="3.2.0">
-  <project timestamp="1567700854312" name="All files">
-    <metrics statements="149" coveredstatements="147" conditionals="64" coveredconditionals="60" methods="25" coveredmethods="25" elements="238" coveredelements="232" complexity="0" loc="149" ncloc="149" packages="2" files="7" classes="7"/>
+<coverage generated="1567782854645" clover="3.2.0">
+  <project timestamp="1567782854645" name="All files">
+    <metrics statements="146" coveredstatements="144" conditionals="64" coveredconditionals="60" methods="22" coveredmethods="22" elements="232" coveredelements="226" complexity="0" loc="146" ncloc="146" packages="2" files="7" classes="7"/>
     <package name="src">
-      <metrics statements="128" coveredstatements="126" conditionals="52" coveredconditionals="48" methods="17" coveredmethods="17"/>
+      <metrics statements="127" coveredstatements="125" conditionals="52" coveredconditionals="48" methods="16" coveredmethods="16"/>
       <file name="Astronomy.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/Astronomy.ts">
         <metrics statements="37" coveredstatements="37" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
-        <line num="7" count="70" type="stmt"/>
-        <line num="15" count="625" type="stmt"/>
-        <line num="16" count="625" type="stmt"/>
-        <line num="17" count="625" type="stmt"/>
-        <line num="18" count="625" type="stmt"/>
+        <line num="11" count="70" type="stmt"/>
+        <line num="19" count="625" type="stmt"/>
+        <line num="20" count="625" type="stmt"/>
+        <line num="21" count="625" type="stmt"/>
         <line num="22" count="625" type="stmt"/>
-        <line num="29" count="625" type="stmt"/>
-        <line num="32" count="625" type="stmt"/>
-        <line num="35" count="625" type="stmt"/>
-        <line num="38" count="625" type="stmt"/>
-        <line num="53" count="625" type="cond" truecount="2" falsecount="0"/>
-        <line num="57" count="625" type="stmt"/>
-        <line num="68" count="490" type="stmt"/>
-        <line num="69" count="490" type="stmt"/>
-        <line num="70" count="490" type="stmt"/>
+        <line num="26" count="625" type="stmt"/>
+        <line num="33" count="625" type="stmt"/>
+        <line num="36" count="625" type="stmt"/>
+        <line num="39" count="625" type="stmt"/>
+        <line num="42" count="625" type="stmt"/>
+        <line num="57" count="625" type="cond" truecount="2" falsecount="0"/>
+        <line num="61" count="625" type="stmt"/>
+        <line num="72" count="490" type="stmt"/>
         <line num="73" count="490" type="stmt"/>
-        <line num="76" count="490" type="stmt"/>
-        <line num="79" count="490" type="stmt"/>
-        <line num="84" count="490" type="stmt"/>
-        <line num="87" count="490" type="stmt"/>
-        <line num="89" count="490" type="stmt"/>
-        <line num="96" count="147" type="stmt"/>
-        <line num="97" count="147" type="stmt"/>
-        <line num="98" count="147" type="stmt"/>
-        <line num="99" count="147" type="stmt"/>
+        <line num="74" count="490" type="stmt"/>
+        <line num="77" count="490" type="stmt"/>
+        <line num="80" count="490" type="stmt"/>
+        <line num="83" count="490" type="stmt"/>
+        <line num="88" count="490" type="stmt"/>
+        <line num="91" count="490" type="stmt"/>
+        <line num="93" count="490" type="stmt"/>
         <line num="100" count="147" type="stmt"/>
-        <line num="101" count="147" type="cond" truecount="2" falsecount="0"/>
-        <line num="102" count="111" type="stmt"/>
-        <line num="109" count="43" type="stmt"/>
-        <line num="112" count="43" type="stmt"/>
+        <line num="101" count="147" type="stmt"/>
+        <line num="102" count="147" type="stmt"/>
+        <line num="103" count="147" type="stmt"/>
+        <line num="104" count="147" type="stmt"/>
+        <line num="105" count="147" type="cond" truecount="2" falsecount="0"/>
+        <line num="106" count="111" type="stmt"/>
         <line num="113" count="43" type="stmt"/>
-        <line num="114" count="43" type="stmt"/>
         <line num="116" count="43" type="stmt"/>
-        <line num="117" count="334" type="stmt"/>
-        <line num="118" count="334" type="stmt"/>
-        <line num="119" count="334" type="stmt"/>
-        <line num="122" count="43" type="stmt"/>
+        <line num="117" count="43" type="stmt"/>
+        <line num="118" count="43" type="stmt"/>
+        <line num="120" count="43" type="stmt"/>
+        <line num="121" count="334" type="stmt"/>
+        <line num="122" count="334" type="stmt"/>
+        <line num="123" count="334" type="stmt"/>
+        <line num="126" count="43" type="stmt"/>
       </file>
       <file name="BaseDate.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/BaseDate.ts">
         <metrics statements="12" coveredstatements="12" conditionals="12" coveredconditionals="12" methods="4" coveredmethods="4"/>
-        <line num="13" count="296" type="stmt"/>
-        <line num="14" count="296" type="stmt"/>
-        <line num="15" count="296" type="stmt"/>
-        <line num="19" count="18" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="17" type="cond" truecount="2" falsecount="0"/>
-        <line num="23" count="16" type="cond" truecount="2" falsecount="0"/>
-        <line num="24" count="15" type="cond" truecount="2" falsecount="0"/>
-        <line num="27" count="14" type="cond" truecount="2" falsecount="0"/>
-        <line num="28" count="13" type="cond" truecount="2" falsecount="0"/>
-        <line num="30" count="12" type="stmt"/>
-        <line num="34" count="11" type="stmt"/>
-        <line num="38" count="24" type="stmt"/>
+        <line num="19" count="290" type="stmt"/>
+        <line num="20" count="290" type="stmt"/>
+        <line num="21" count="290" type="stmt"/>
+        <line num="25" count="19" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="13" type="stmt"/>
+        <line num="40" count="11" type="stmt"/>
+        <line num="44" count="24" type="stmt"/>
       </file>
       <file name="LunarDate.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/LunarDate.ts">
-        <metrics statements="31" coveredstatements="31" conditionals="14" coveredconditionals="12" methods="4" coveredmethods="4"/>
-        <line num="11" count="51" type="stmt"/>
-        <line num="12" count="51" type="stmt"/>
-        <line num="16" count="12" type="stmt"/>
-        <line num="20" count="39" type="stmt"/>
+        <metrics statements="30" coveredstatements="30" conditionals="14" coveredconditionals="12" methods="3" coveredmethods="3"/>
+        <line num="14" count="51" type="stmt"/>
+        <line num="15" count="51" type="stmt"/>
+        <line num="19" count="39" type="stmt"/>
+        <line num="21" count="39" type="stmt"/>
         <line num="22" count="39" type="stmt"/>
         <line num="23" count="39" type="stmt"/>
-        <line num="24" count="39" type="stmt"/>
-        <line num="26" count="39" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="39" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="26" type="stmt"/>
         <line num="27" count="26" type="stmt"/>
         <line num="28" count="26" type="stmt"/>
-        <line num="29" count="26" type="stmt"/>
+        <line num="30" count="13" type="stmt"/>
         <line num="31" count="13" type="stmt"/>
         <line num="32" count="13" type="stmt"/>
-        <line num="33" count="13" type="stmt"/>
-        <line num="36" count="39" type="stmt"/>
+        <line num="35" count="39" type="stmt"/>
+        <line num="37" count="39" type="stmt"/>
         <line num="38" count="39" type="stmt"/>
-        <line num="39" count="39" type="stmt"/>
-        <line num="41" count="39" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="39" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="22" type="stmt"/>
         <line num="42" count="22" type="stmt"/>
-        <line num="43" count="22" type="stmt"/>
-        <line num="44" count="22" type="cond" truecount="1" falsecount="1"/>
-        <line num="45" count="22" type="cond" truecount="3" falsecount="1"/>
-        <line num="46" count="22" type="cond" truecount="4" falsecount="0"/>
+        <line num="43" count="22" type="cond" truecount="1" falsecount="1"/>
+        <line num="44" count="22" type="cond" truecount="3" falsecount="1"/>
+        <line num="45" count="22" type="cond" truecount="4" falsecount="0"/>
+        <line num="48" count="39" type="stmt"/>
         <line num="49" count="39" type="stmt"/>
-        <line num="50" count="39" type="stmt"/>
-        <line num="54" count="27" type="stmt"/>
-        <line num="56" count="27" type="stmt"/>
-        <line num="61" count="27" type="stmt"/>
-        <line num="66" count="27" type="stmt"/>
-        <line num="71" count="27" type="stmt"/>
-        <line num="76" count="27" type="stmt"/>
+        <line num="53" count="27" type="stmt"/>
+        <line num="55" count="27" type="stmt"/>
+        <line num="60" count="27" type="stmt"/>
+        <line num="65" count="27" type="stmt"/>
+        <line num="70" count="27" type="stmt"/>
+        <line num="75" count="27" type="stmt"/>
       </file>
       <file name="SolarDate.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/SolarDate.ts">
         <metrics statements="48" coveredstatements="46" conditionals="20" coveredconditionals="18" methods="4" coveredmethods="4"/>
@@ -146,9 +145,9 @@
       </file>
     </package>
     <package name="src.Sexagenary">
-      <metrics statements="21" coveredstatements="21" conditionals="12" coveredconditionals="12" methods="8" coveredmethods="8"/>
+      <metrics statements="19" coveredstatements="19" conditionals="12" coveredconditionals="12" methods="6" coveredmethods="6"/>
       <file name="Sexagenary.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/Sexagenary/Sexagenary.ts">
-        <metrics statements="15" coveredstatements="15" conditionals="11" coveredconditionals="11" methods="5" coveredmethods="5"/>
+        <metrics statements="14" coveredstatements="14" conditionals="11" coveredconditionals="11" methods="4" coveredmethods="4"/>
         <line num="51" count="6" type="stmt"/>
         <line num="52" count="20" type="stmt"/>
         <line num="53" count="20" type="cond" truecount="2" falsecount="0"/>
@@ -158,21 +157,19 @@
         <line num="67" count="10" type="stmt"/>
         <line num="68" count="10" type="stmt"/>
         <line num="69" count="10" type="stmt"/>
-        <line num="73" count="45" type="stmt"/>
-        <line num="80" count="217" type="cond" truecount="4" falsecount="0"/>
-        <line num="81" count="217" type="cond" truecount="4" falsecount="0"/>
-        <line num="83" count="216" type="stmt"/>
-        <line num="84" count="216" type="stmt"/>
-        <line num="85" count="216" type="stmt"/>
+        <line num="73" count="217" type="cond" truecount="4" falsecount="0"/>
+        <line num="74" count="217" type="cond" truecount="4" falsecount="0"/>
+        <line num="76" count="216" type="stmt"/>
+        <line num="77" count="216" type="stmt"/>
+        <line num="78" count="216" type="stmt"/>
       </file>
       <file name="SexagenaryDate.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/Sexagenary/SexagenaryDate.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="24" count="27" type="stmt"/>
         <line num="25" count="27" type="stmt"/>
         <line num="26" count="27" type="stmt"/>
         <line num="27" count="27" type="stmt"/>
-        <line num="31" count="18" type="stmt"/>
-        <line num="40" count="45" type="stmt"/>
+        <line num="31" count="45" type="stmt"/>
       </file>
       <file name="index.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/Sexagenary/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
