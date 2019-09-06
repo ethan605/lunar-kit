@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1567782854645" clover="3.2.0">
-  <project timestamp="1567782854645" name="All files">
+<coverage generated="1567783666711" clover="3.2.0">
+  <project timestamp="1567783666711" name="All files">
     <metrics statements="146" coveredstatements="144" conditionals="64" coveredconditionals="60" methods="22" coveredmethods="22" elements="232" coveredelements="226" complexity="0" loc="146" ncloc="146" packages="2" files="7" classes="7"/>
     <package name="src">
       <metrics statements="127" coveredstatements="125" conditionals="52" coveredconditionals="48" methods="16" coveredmethods="16"/>
@@ -55,9 +55,9 @@
         <line num="30" count="16" type="cond" truecount="2" falsecount="0"/>
         <line num="33" count="15" type="cond" truecount="2" falsecount="0"/>
         <line num="34" count="14" type="cond" truecount="2" falsecount="0"/>
-        <line num="36" count="13" type="stmt"/>
-        <line num="40" count="11" type="stmt"/>
-        <line num="44" count="24" type="stmt"/>
+        <line num="37" count="13" type="stmt"/>
+        <line num="41" count="11" type="stmt"/>
+        <line num="45" count="24" type="stmt"/>
       </file>
       <file name="LunarDate.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/LunarDate.ts">
         <metrics statements="30" coveredstatements="30" conditionals="14" coveredconditionals="12" methods="3" coveredmethods="3"/>
@@ -149,14 +149,14 @@
       <file name="Sexagenary.ts" path="/Users/ethanify/Documents/Workspaces/Personal/lunar-kit/packages/converters/src/Sexagenary/Sexagenary.ts">
         <metrics statements="14" coveredstatements="14" conditionals="11" coveredconditionals="11" methods="4" coveredmethods="4"/>
         <line num="51" count="6" type="stmt"/>
-        <line num="52" count="20" type="stmt"/>
-        <line num="53" count="20" type="cond" truecount="2" falsecount="0"/>
+        <line num="52" count="22" type="stmt"/>
+        <line num="53" count="22" type="cond" truecount="2" falsecount="0"/>
         <line num="54" count="5" type="stmt"/>
-        <line num="62" count="129" type="stmt"/>
-        <line num="63" count="129" type="stmt"/>
-        <line num="67" count="10" type="stmt"/>
-        <line num="68" count="10" type="stmt"/>
-        <line num="69" count="10" type="stmt"/>
+        <line num="62" count="130" type="stmt"/>
+        <line num="63" count="130" type="stmt"/>
+        <line num="67" count="11" type="stmt"/>
+        <line num="68" count="11" type="stmt"/>
+        <line num="69" count="11" type="stmt"/>
         <line num="73" count="217" type="cond" truecount="4" falsecount="0"/>
         <line num="74" count="217" type="cond" truecount="4" falsecount="0"/>
         <line num="76" count="216" type="stmt"/>
