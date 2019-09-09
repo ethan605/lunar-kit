@@ -5,7 +5,7 @@ export interface AstronomyParams {
 }
 
 export default class Astronomy {
-  private timeZone: number;
+  readonly timeZone: number;
 
   constructor({ timeZone }: AstronomyParams) {
     this.timeZone = timeZone;

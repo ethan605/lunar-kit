@@ -70,7 +70,7 @@ export default class Sexagenary {
   }
 
   toString(locale: Locales = Locales.Default): string {
-    const { delimiter, stems = null, branches = null } = LOCALES[locale] || {};
+    const { delimiter = '', stems = null, branches = null } = LOCALES[locale] || {};
     if (stems == null || branches == null) return '';
 
     const stem = stems[this.stem];

@@ -11,6 +11,7 @@
   },
   "scripts": {
     "build": "jest && gulp build",
+    "build:declaration": "tsc --project tsconfig.declaration.json",
     "console": "babel-node --extensions \".ts\"",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "jest"

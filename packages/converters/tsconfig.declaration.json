@@ -1,9 +1,12 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "module": "commonjs",
+    "allowJs": false,
+    "declaration": true,
+    "isolatedModules": false,
+    "module": "amd",
     "noEmit": false,
-    "outDir": "ts-dist"
+    "outFile": "ts-dist/index.amd.js"
   },
   "include": [
     "index.ts",
