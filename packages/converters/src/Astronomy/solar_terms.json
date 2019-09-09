@@ -1,0 +1,266 @@
+[
+  {
+    "lunarMonth": 0,
+    "sunLongitude": 315,
+    "possibleDates": ["4/2", "5/2"],
+    "locales": {
+      "default": "spring-commences",
+      "ko": "립춘",
+      "vi": "Lập Xuân",
+      "zh": "立春"
+    }
+  },
+  {
+    "lunarMonth": 0,
+    "sunLongitude": 330,
+    "possibleDates": ["18/2", "19/2"],
+    "locales": {
+      "default": "spring-showers",
+      "ko": "우수",
+      "vi": "Vũ Thủy",
+      "zh": "雨水"
+    }
+  },
+  {
+    "lunarMonth": 1,
+    "sunLongitude": 345,
+    "possibleDates": ["6/3", "7/3"],
+    "locales": {
+      "default": "insects-waken",
+      "ko": "경칩",
+      "vi": "Kinh Trập",
+      "zh": "驚蟄"
+    }
+  },
+  {
+    "lunarMonth": 1,
+    "sunLongitude": 0,
+    "possibleDates": ["20/3", "21/3"],
+    "locales": {
+      "default": "vernal-equinox",
+      "ko": "춘분",
+      "vi": "Xuân Phân",
+      "zh": "春分"
+    }
+  },
+  {
+    "lunarMonth": 2,
+    "sunLongitude": 15,
+    "possibleDates": ["5/4", "6/4"],
+    "locales": {
+      "default": "bright-and clear",
+      "ko": "청명",
+      "vi": "Thanh Minh",
+      "zh": "清明"
+    }
+  },
+  {
+    "lunarMonth": 2,
+    "sunLongitude": 30,
+    "possibleDates": ["20/4", "21/4"],
+    "locales": {
+      "default": "corn-rain",
+      "ko": "곡우",
+      "vi": "Cốc Vũ",
+      "zh": "穀雨"
+    }
+  },
+  {
+    "lunarMonth": 3,
+    "sunLongitude": 45,
+    "possibleDates": ["6/5", "7/5"],
+    "locales": {
+      "default": "summer-commences",
+      "ko": "립하",
+      "vi": "Lập Hạ",
+      "zh": "立夏"
+    }
+  },
+  {
+    "lunarMonth": 3,
+    "sunLongitude": 60,
+    "possibleDates": ["21/5", "22/5"],
+    "locales": {
+      "default": "corn-forms",
+      "ko": "소만",
+      "vi": "Tiểu Mãn",
+      "zh": "小滿"
+    }
+  },
+  {
+    "lunarMonth": 4,
+    "sunLongitude": 75,
+    "possibleDates": ["6/6", "7/6"],
+    "locales": {
+      "default": "seeding-millet",
+      "ko": "망종",
+      "vi": "Mang Chủng",
+      "zh": "芒種"
+    }
+  },
+  {
+    "lunarMonth": 4,
+    "sunLongitude": 90,
+    "possibleDates": ["21/6", "22/6"],
+    "locales": {
+      "default": "summer-solstice",
+      "ko": "하지",
+      "vi": "Hạ Chí",
+      "zh": "夏至"
+    }
+  },
+  {
+    "lunarMonth": 5,
+    "sunLongitude": 105,
+    "possibleDates": ["7/7", "8/7"],
+    "locales": {
+      "default": "moderate-heat",
+      "ko": "소서",
+      "vi": "Tiểu Thử",
+      "zh": "小暑"
+    }
+  },
+  {
+    "lunarMonth": 5,
+    "sunLongitude": 120,
+    "possibleDates": ["22/7", "23/7"],
+    "locales": {
+      "default": "great-heat",
+      "ko": "대서",
+      "vi": "Đại Thử",
+      "zh": "大暑"
+    }
+  },
+  {
+    "lunarMonth": 6,
+    "sunLongitude": 135,
+    "possibleDates": ["8/8", "9/8"],
+    "locales": {
+      "default": "autumn-commences",
+      "ko": "립추",
+      "vi": "Lập Thu",
+      "zh": "立秋"
+    }
+  },
+  {
+    "lunarMonth": 6,
+    "sunLongitude": 150,
+    "possibleDates": ["23/8", "24/8"],
+    "locales": {
+      "default": "end-of heat",
+      "ko": "처서",
+      "vi": "Xử Thử",
+      "zh": "處暑"
+    }
+  },
+  {
+    "lunarMonth": 7,
+    "sunLongitude": 165,
+    "possibleDates": ["8/9", "9/9"],
+    "locales": {
+      "default": "white-dew",
+      "ko": "백로",
+      "vi": "Bạch Lộ",
+      "zh": "白露"
+    }
+  },
+  {
+    "lunarMonth": 7,
+    "sunLongitude": 180,
+    "possibleDates": ["22/9", "23/9"],
+    "locales": {
+      "default": "autumn-equinox",
+      "ko": "추분",
+      "vi": "Thu Phân",
+      "zh": "秋分"
+    }
+  },
+  {
+    "lunarMonth": 8,
+    "sunLongitude": 195,
+    "possibleDates": ["8/10", "9/10"],
+    "locales": {
+      "default": "cold-dew",
+      "ko": "한로",
+      "vi": "Hàn Lộ",
+      "zh": "寒露"
+    }
+  },
+  {
+    "lunarMonth": 8,
+    "sunLongitude": 210,
+    "possibleDates": ["23/10", "24/10"],
+    "locales": {
+      "default": "frost-begins",
+      "ko": "상강",
+      "vi": "Sương Giáng",
+      "zh": "霜降"
+    }
+  },
+  {
+    "lunarMonth": 9,
+    "sunLongitude": 225,
+    "possibleDates": ["7/11", "8/11"],
+    "locales": {
+      "default": "winter-commences",
+      "ko": "립동",
+      "vi": "Lập Đông",
+      "zh": "立冬"
+    }
+  },
+  {
+    "lunarMonth": 9,
+    "sunLongitude": 240,
+    "possibleDates": ["22/11", "23/11"],
+    "locales": {
+      "default": "light-snow",
+      "ko": "소설",
+      "vi": "Tiểu Tuyết",
+      "zh": "小雪"
+    }
+  },
+  {
+    "lunarMonth": 10,
+    "sunLongitude": 255,
+    "possibleDates": ["7/12", "8/12"],
+    "locales": {
+      "default": "heavy-snow",
+      "ko": "대설",
+      "vi": "Đại Tuyết",
+      "zh": "大雪"
+    }
+  },
+  {
+    "lunarMonth": 10,
+    "sunLongitude": 270,
+    "possibleDates": ["21/12", "22/12"],
+    "locales": {
+      "default": "winter-solstice",
+      "ko": "동지",
+      "vi": "Đông Chí",
+      "zh": "冬至"
+    }
+  },
+  {
+    "lunarMonth": 11,
+    "sunLongitude": 285,
+    "possibleDates": ["5/1", "6/1"],
+    "locales": {
+      "default": "moderate-cold",
+      "ko": "소한",
+      "vi": "Tiểu Hàn",
+      "zh": "小寒"
+    }
+  },
+  {
+    "lunarMonth": 11,
+    "sunLongitude": 300,
+    "possibleDates": ["20/1", "21/1"],
+    "locales": {
+      "default": "severe-cold",
+      "ko": "대한",
+      "vi": "Đại Hàn",
+      "zh": "大寒"
+    }
+  }
+]

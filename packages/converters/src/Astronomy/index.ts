@@ -1,4 +1,4 @@
-import SolarDate from './SolarDate';
+import SolarDate from '../SolarDate';
 
 export interface AstronomyParams {
   timeZone: number;
@@ -61,15 +61,9 @@ export default class Astronomy {
     return Math.floor(julianDays + C - delta + 0.5 + this.timeZone / 24);
   }
 
-  /**
-   * Compute sun position at midnight of the day with the given Julian day number.
-   * The function returns a number between 0 and 11.
-   * From the day after March equinox and the 1st major term after March equinox, 0 is returned.
-   * After that, return 1, 2, 3 ...
-   */
-  getSunLongitude(dayNumber: number): number {
+  private calculateSunLongitute(julianDays: number): number {
     // Time in Julian centuries from 2000-01-01 12:00:00 GMT
-    const T = (dayNumber - 0.5 - this.timeZone / 24 - 2451545.0) / 36525;
+    const T = (julianDays - 0.5 - this.timeZone / 24 - 2451545.0) / 36525;
     const T2 = T * T;
     const radian = Math.PI / 180;
 
@@ -79,18 +73,41 @@ export default class Astronomy {
     // Mean longitude, degree
     const L0 = 280.46645 + 36000.76983 * T + 0.0003032 * T2;
 
-    const DL =
+    const C =
       (1.9146 - 0.004817 * T - 0.000014 * T2) * Math.sin(radian * M) +
       (0.019993 - 0.000101 * T) * Math.sin(radian * 2 * M) +
       0.00029 * Math.sin(radian * 3 * M);
 
     // True longitude in degree
-    const L1 = (L0 + DL) * radian;
+    return L0 + C;
+  }
+
+  /**
+   * Compute sun position at midnight of the day with the given Julian day number.
+   * The function returns a number between 0 and 11.
+   * From the day after March equinox and the 1st major term after March equinox, 0 is returned.
+   * After that, return 1, 2, 3 ...
+   */
+  getSunLongitudeMidNight(julianDays: number): number {
+    // True longitude in degree
+    const theta = (this.calculateSunLongitute(julianDays) * Math.PI) / 180;
 
     // Normalize to (0, 2*PI)
-    const L = L1 - Math.PI * 2 * Math.floor(L1 / (Math.PI * 2));
+    const lambda = theta - Math.PI * 2 * Math.floor(theta / (Math.PI * 2));
 
-    return Math.floor((L / Math.PI) * 6);
+    return Math.floor((lambda / Math.PI) * 6);
+  }
+
+  getSunLongitudeSolarTerm(julianDays: number): number {
+    const T = (julianDays - 0.5 - this.timeZone / 24 - 2451545.0) / 36525;
+
+    // True longitude in degree
+    const theta = this.calculateSunLongitute(julianDays);
+
+    // Normalize to (0, 2*PI)
+    const lambda = theta - 0.00569 - 0.00478 * Math.sin(((125.04 - 1934.136 * T) * Math.PI) / 180);
+
+    return lambda - 360 * Math.floor(lambda / 360);
   }
 
   /**
@@ -101,7 +118,7 @@ export default class Astronomy {
     const off = solarDate.toJulianDays() - 2415021.076998695;
     const order = Math.floor(off / 29.530588853);
     const newMoonDay = this.getNewMoonDay(order);
-    const sunLong = this.getSunLongitude(newMoonDay);
+    const sunLong = this.getSunLongitudeMidNight(newMoonDay);
     if (sunLong >= 9) return this.getNewMoonDay(order - 1);
     return newMoonDay;
   }
@@ -120,7 +137,7 @@ export default class Astronomy {
     do {
       last = arc;
       counter += 1;
-      arc = this.getSunLongitude(this.getNewMoonDay(order + counter));
+      arc = this.getSunLongitudeMidNight(this.getNewMoonDay(order + counter));
     } while (arc != last && counter < 14);
 
     return counter - 1;

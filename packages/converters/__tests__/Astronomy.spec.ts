@@ -1,8 +1,10 @@
 import Astronomy from '../src/Astronomy';
+import SolarDate from '../src/SolarDate';
 
 // Fixtures
 import lunarMonthFixtures from './fixtures/astronomy/lunar_months.json';
 import newMoonFixtures from './fixtures/astronomy/new_moons.json';
+import solarTermFixtures from './fixtures/astronomy/solar_terms.json';
 
 describe('Astronomy', () => {
   const astronomy = new Astronomy({ timeZone: 7 }); // Astronomy setup for UTC+07:00
@@ -13,9 +15,16 @@ describe('Astronomy', () => {
     });
   });
 
-  it('should compute sun longitudes correctly', () => {
+  it('should compute sun longitude at mid nights correctly', () => {
     newMoonFixtures.forEach(({ julianDays, sunLong }) => {
-      expect(astronomy.getSunLongitude(julianDays)).toEqual(sunLong);
+      expect(astronomy.getSunLongitudeMidNight(julianDays)).toEqual(sunLong);
+    });
+  });
+
+  it('should compute sun longitute for solar terms correctly', () => {
+    solarTermFixtures.forEach(({ solarDate, sunLong }) => {
+      const longitute = astronomy.getSunLongitudeSolarTerm(new SolarDate(solarDate).toJulianDays());
+      expect(longitute).toEqual(sunLong);
     });
   });
 
