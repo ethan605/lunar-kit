@@ -15,7 +15,7 @@ export default class LunarDate extends BaseDate {
     this.isLeapMonth = isLeapMonth;
   }
 
-  toSolarDate(timeZone: number): SolarDate {
+  toSolarDate({ timeZone }: AstronomyParams): SolarDate {
     const astronomy = new Astronomy({ timeZone });
 
     let a11 = 0;
@@ -50,7 +50,7 @@ export default class LunarDate extends BaseDate {
   }
 
   toSexagenaryDate({ timeZone }: AstronomyParams): SexagenaryDate {
-    const julianDays = this.toSolarDate(timeZone).toJulianDays();
+    const julianDays = this.toSolarDate({ timeZone }).toJulianDays();
 
     const year = new Sexagenary({
       stem: (this.year + 6) % 10,

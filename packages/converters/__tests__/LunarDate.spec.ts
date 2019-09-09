@@ -8,7 +8,7 @@ describe('LunarDate', () => {
     fixtures.forEach(({ solar, timeZone, lunar, leapMonth }) => {
       const [day, month, year] = lunar;
       const lunarDate = new LunarDate({ day, month, year, isLeapMonth: leapMonth });
-      const solarDate = lunarDate.toSolarDate(timeZone);
+      const solarDate = lunarDate.toSolarDate({ timeZone });
       expect(solarDate.toArray()).toEqual(solar);
     });
   });
