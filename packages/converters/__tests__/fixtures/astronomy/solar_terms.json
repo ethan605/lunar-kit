@@ -17,6 +17,14 @@
   },
   {
     "solarDate": {
+      "day": 22,
+      "month": 1,
+      "year": 1966
+    },
+    "sunLong": 301.2186003995921
+  },
+  {
+    "solarDate": {
       "day": 5,
       "month": 2,
       "year": 1966

@@ -100,13 +100,8 @@ export default class Astronomy {
 
   getSunLongitudeSolarTerm(julianDays: number): number {
     const T = (julianDays - 0.5 - this.timeZone / 24 - 2451545.0) / 36525;
-
-    // True longitude in degree
     const theta = this.calculateSunLongitute(julianDays);
-
-    // Normalize to (0, 2*PI)
     const lambda = theta - 0.00569 - 0.00478 * Math.sin(((125.04 - 1934.136 * T) * Math.PI) / 180);
-
     return lambda - 360 * Math.floor(lambda / 360);
   }
 

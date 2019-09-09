@@ -2,7 +2,16 @@
   {
     "lunarMonth": 0,
     "sunLongitude": 315,
-    "possibleDates": ["4/2", "5/2"],
+    "possibleDates": [
+      {
+        "day": 4,
+        "month": 2
+      },
+      {
+        "day": 5,
+        "month": 2
+      }
+    ],
     "locales": {
       "default": "spring-commences",
       "ko": "립춘",
@@ -13,7 +22,16 @@
   {
     "lunarMonth": 0,
     "sunLongitude": 330,
-    "possibleDates": ["18/2", "19/2"],
+    "possibleDates": [
+      {
+        "day": 18,
+        "month": 2
+      },
+      {
+        "day": 19,
+        "month": 2
+      }
+    ],
     "locales": {
       "default": "spring-showers",
       "ko": "우수",
@@ -24,7 +42,16 @@
   {
     "lunarMonth": 1,
     "sunLongitude": 345,
-    "possibleDates": ["6/3", "7/3"],
+    "possibleDates": [
+      {
+        "day": 6,
+        "month": 3
+      },
+      {
+        "day": 7,
+        "month": 3
+      }
+    ],
     "locales": {
       "default": "insects-waken",
       "ko": "경칩",
@@ -35,7 +62,16 @@
   {
     "lunarMonth": 1,
     "sunLongitude": 0,
-    "possibleDates": ["20/3", "21/3"],
+    "possibleDates": [
+      {
+        "day": 20,
+        "month": 3
+      },
+      {
+        "day": 21,
+        "month": 3
+      }
+    ],
     "locales": {
       "default": "vernal-equinox",
       "ko": "춘분",
@@ -46,7 +82,16 @@
   {
     "lunarMonth": 2,
     "sunLongitude": 15,
-    "possibleDates": ["5/4", "6/4"],
+    "possibleDates": [
+      {
+        "day": 5,
+        "month": 4
+      },
+      {
+        "day": 6,
+        "month": 4
+      }
+    ],
     "locales": {
       "default": "bright-and clear",
       "ko": "청명",
@@ -57,7 +102,16 @@
   {
     "lunarMonth": 2,
     "sunLongitude": 30,
-    "possibleDates": ["20/4", "21/4"],
+    "possibleDates": [
+      {
+        "day": 20,
+        "month": 4
+      },
+      {
+        "day": 21,
+        "month": 4
+      }
+    ],
     "locales": {
       "default": "corn-rain",
       "ko": "곡우",
@@ -68,7 +122,16 @@
   {
     "lunarMonth": 3,
     "sunLongitude": 45,
-    "possibleDates": ["6/5", "7/5"],
+    "possibleDates": [
+      {
+        "day": 6,
+        "month": 5
+      },
+      {
+        "day": 7,
+        "month": 5
+      }
+    ],
     "locales": {
       "default": "summer-commences",
       "ko": "립하",
@@ -79,7 +142,16 @@
   {
     "lunarMonth": 3,
     "sunLongitude": 60,
-    "possibleDates": ["21/5", "22/5"],
+    "possibleDates": [
+      {
+        "day": 21,
+        "month": 5
+      },
+      {
+        "day": 22,
+        "month": 5
+      }
+    ],
     "locales": {
       "default": "corn-forms",
       "ko": "소만",
@@ -90,7 +162,16 @@
   {
     "lunarMonth": 4,
     "sunLongitude": 75,
-    "possibleDates": ["6/6", "7/6"],
+    "possibleDates": [
+      {
+        "day": 6,
+        "month": 6
+      },
+      {
+        "day": 7,
+        "month": 6
+      }
+    ],
     "locales": {
       "default": "seeding-millet",
       "ko": "망종",
@@ -101,7 +182,16 @@
   {
     "lunarMonth": 4,
     "sunLongitude": 90,
-    "possibleDates": ["21/6", "22/6"],
+    "possibleDates": [
+      {
+        "day": 21,
+        "month": 6
+      },
+      {
+        "day": 22,
+        "month": 6
+      }
+    ],
     "locales": {
       "default": "summer-solstice",
       "ko": "하지",
@@ -112,7 +202,16 @@
   {
     "lunarMonth": 5,
     "sunLongitude": 105,
-    "possibleDates": ["7/7", "8/7"],
+    "possibleDates": [
+      {
+        "day": 7,
+        "month": 7
+      },
+      {
+        "day": 8,
+        "month": 7
+      }
+    ],
     "locales": {
       "default": "moderate-heat",
       "ko": "소서",
@@ -123,7 +222,16 @@
   {
     "lunarMonth": 5,
     "sunLongitude": 120,
-    "possibleDates": ["22/7", "23/7"],
+    "possibleDates": [
+      {
+        "day": 22,
+        "month": 7
+      },
+      {
+        "day": 23,
+        "month": 7
+      }
+    ],
     "locales": {
       "default": "great-heat",
       "ko": "대서",
@@ -134,7 +242,16 @@
   {
     "lunarMonth": 6,
     "sunLongitude": 135,
-    "possibleDates": ["8/8", "9/8"],
+    "possibleDates": [
+      {
+        "day": 8,
+        "month": 8
+      },
+      {
+        "day": 9,
+        "month": 8
+      }
+    ],
     "locales": {
       "default": "autumn-commences",
       "ko": "립추",
@@ -145,7 +262,16 @@
   {
     "lunarMonth": 6,
     "sunLongitude": 150,
-    "possibleDates": ["23/8", "24/8"],
+    "possibleDates": [
+      {
+        "day": 23,
+        "month": 8
+      },
+      {
+        "day": 24,
+        "month": 8
+      }
+    ],
     "locales": {
       "default": "end-of heat",
       "ko": "처서",
@@ -156,7 +282,16 @@
   {
     "lunarMonth": 7,
     "sunLongitude": 165,
-    "possibleDates": ["8/9", "9/9"],
+    "possibleDates": [
+      {
+        "day": 8,
+        "month": 9
+      },
+      {
+        "day": 9,
+        "month": 9
+      }
+    ],
     "locales": {
       "default": "white-dew",
       "ko": "백로",
@@ -167,7 +302,16 @@
   {
     "lunarMonth": 7,
     "sunLongitude": 180,
-    "possibleDates": ["22/9", "23/9"],
+    "possibleDates": [
+      {
+        "day": 22,
+        "month": 9
+      },
+      {
+        "day": 23,
+        "month": 9
+      }
+    ],
     "locales": {
       "default": "autumn-equinox",
       "ko": "추분",
@@ -178,7 +322,16 @@
   {
     "lunarMonth": 8,
     "sunLongitude": 195,
-    "possibleDates": ["8/10", "9/10"],
+    "possibleDates": [
+      {
+        "day": 8,
+        "month": 10
+      },
+      {
+        "day": 9,
+        "month": 10
+      }
+    ],
     "locales": {
       "default": "cold-dew",
       "ko": "한로",
@@ -189,7 +342,16 @@
   {
     "lunarMonth": 8,
     "sunLongitude": 210,
-    "possibleDates": ["23/10", "24/10"],
+    "possibleDates": [
+      {
+        "day": 23,
+        "month": 10
+      },
+      {
+        "day": 24,
+        "month": 10
+      }
+    ],
     "locales": {
       "default": "frost-begins",
       "ko": "상강",
@@ -200,7 +362,16 @@
   {
     "lunarMonth": 9,
     "sunLongitude": 225,
-    "possibleDates": ["7/11", "8/11"],
+    "possibleDates": [
+      {
+        "day": 7,
+        "month": 11
+      },
+      {
+        "day": 8,
+        "month": 11
+      }
+    ],
     "locales": {
       "default": "winter-commences",
       "ko": "립동",
@@ -211,7 +382,16 @@
   {
     "lunarMonth": 9,
     "sunLongitude": 240,
-    "possibleDates": ["22/11", "23/11"],
+    "possibleDates": [
+      {
+        "day": 22,
+        "month": 11
+      },
+      {
+        "day": 23,
+        "month": 11
+      }
+    ],
     "locales": {
       "default": "light-snow",
       "ko": "소설",
@@ -222,7 +402,16 @@
   {
     "lunarMonth": 10,
     "sunLongitude": 255,
-    "possibleDates": ["7/12", "8/12"],
+    "possibleDates": [
+      {
+        "day": 7,
+        "month": 12
+      },
+      {
+        "day": 8,
+        "month": 12
+      }
+    ],
     "locales": {
       "default": "heavy-snow",
       "ko": "대설",
@@ -233,7 +422,16 @@
   {
     "lunarMonth": 10,
     "sunLongitude": 270,
-    "possibleDates": ["21/12", "22/12"],
+    "possibleDates": [
+      {
+        "day": 21,
+        "month": 12
+      },
+      {
+        "day": 22,
+        "month": 12
+      }
+    ],
     "locales": {
       "default": "winter-solstice",
       "ko": "동지",
@@ -244,7 +442,16 @@
   {
     "lunarMonth": 11,
     "sunLongitude": 285,
-    "possibleDates": ["5/1", "6/1"],
+    "possibleDates": [
+      {
+        "day": 5,
+        "month": 1
+      },
+      {
+        "day": 6,
+        "month": 1
+      }
+    ],
     "locales": {
       "default": "moderate-cold",
       "ko": "소한",
@@ -255,7 +462,16 @@
   {
     "lunarMonth": 11,
     "sunLongitude": 300,
-    "possibleDates": ["20/1", "21/1"],
+    "possibleDates": [
+      {
+        "day": 20,
+        "month": 1
+      },
+      {
+        "day": 21,
+        "month": 1
+      }
+    ],
     "locales": {
       "default": "severe-cold",
       "ko": "대한",
