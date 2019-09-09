@@ -38,5 +38,7 @@
     "ts-node": "^8.3.0",
     "typescript": "3.5.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
 }

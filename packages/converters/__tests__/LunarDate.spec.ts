@@ -12,4 +12,9 @@ describe('LunarDate', () => {
       expect(solarDate.toArray()).toEqual(solar);
     });
   });
+
+  it('should handle edge cases correctly', () => {
+    const date1 = new LunarDate({ day: 24, month: 6, year: 2009, isLeapMonth: true });
+    expect(date1.toSolarDate({ timeZone: 7 })).toEqual({ day: 0, month: 0, year: 0 });
+  });
 });

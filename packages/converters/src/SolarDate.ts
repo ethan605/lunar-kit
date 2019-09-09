@@ -82,7 +82,7 @@ export default class SolarDate extends BaseDate {
 
       if (diff >= leapMonthDiff) {
         month = diff + 10;
-        if (diff == leapMonthDiff) isLeapMonth = true;
+        if (diff === leapMonthDiff) isLeapMonth = true;
       }
     }
 

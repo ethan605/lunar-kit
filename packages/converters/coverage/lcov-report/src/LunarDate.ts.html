@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">93.94% </span>
+        <span class="strong">96.97% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>31/33</span>
+        <span class='fraction'>32/33</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">85.71% </span>
+        <span class="strong">92.86% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>12/14</span>
+        <span class='fraction'>13/14</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -136,42 +136,42 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">51x</span>
-<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-yes">53x</span>
+<span class="cline-any cline-yes">53x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">41x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">39x</span>
-<span class="cline-any cline-yes">39x</span>
-<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">41x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">39x</span>
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">28x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">41x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">39x</span>
-<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">41x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">39x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">23x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">39x</span>
-<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">40x</span>
+<span class="cline-any cline-yes">40x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -217,7 +217,7 @@ export default class LunarDate extends BaseDate {
     this.isLeapMonth = isLeapMonth;
   }
 &nbsp;
-  toSolarDate(timeZone: number): SolarDate {
+  toSolarDate({ timeZone }: AstronomyParams): SolarDate {
     const astronomy = new Astronomy({ timeZone });
 &nbsp;
     let a11 = 0;
@@ -243,7 +243,7 @@ export default class LunarDate extends BaseDate {
       leapOffset = astronomy.getLeapMonthOffset(a11);
       leapMonth = leapOffset - 2;
       <span class="missing-if-branch" title="if path not taken" >I</span>if (leapMonth &lt; 0) <span class="cstat-no" title="statement not covered" >leapMonth += 12;</span>
-      <span class="missing-if-branch" title="if path not taken" >I</span>if (this.isLeapMonth &amp;&amp; this.month != leapMonth) <span class="cstat-no" title="statement not covered" >return new SolarDate({ day: 0, month: 0, year: 0 });</span>
+      if (this.isLeapMonth &amp;&amp; this.month != leapMonth) return new SolarDate({ day: 0, month: 0, year: 0 });
       if (this.isLeapMonth || offset &gt;= leapOffset) offset += 1;
     }
 &nbsp;
@@ -252,7 +252,7 @@ export default class LunarDate extends BaseDate {
   }
 &nbsp;
   toSexagenaryDate({ timeZone }: AstronomyParams): SexagenaryDate {
-    const julianDays = this.toSolarDate(timeZone).toJulianDays();
+    const julianDays = this.toSolarDate({ timeZone }).toJulianDays();
 &nbsp;
     const year = new Sexagenary({
       stem: (this.year + 6) % 10,
@@ -283,7 +283,7 @@ export default class LunarDate extends BaseDate {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Sep 06 2019 22:27:46 GMT+0700 (Indochina Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Sep 09 2019 22:29:29 GMT+0700 (Indochina Time)
 </div>
 </div>
 <script src="../prettify.js"></script>
