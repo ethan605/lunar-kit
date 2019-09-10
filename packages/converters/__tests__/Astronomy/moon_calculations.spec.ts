@@ -1,4 +1,4 @@
-import Astronomy from '../../src/Astronomy';
+import { Astronomy } from '../../src/Astronomy';
 
 // Fixtures
 import lunarMonthFixtures from '../fixtures/astronomy/lunar_months.json';

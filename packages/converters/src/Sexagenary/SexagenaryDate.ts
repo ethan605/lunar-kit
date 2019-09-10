@@ -1,4 +1,5 @@
-import Sexagenary, { Locales } from './Sexagenary';
+import Sexagenary from './Sexagenary';
+import { Locales } from '../utils';
 
 interface SexagenaryDateParams {
   startHour: Sexagenary;

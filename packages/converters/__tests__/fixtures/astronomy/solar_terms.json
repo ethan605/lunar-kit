@@ -5,7 +5,13 @@
       "month": 9,
       "year": 1945
     },
-    "solarTerm": "end-of-heat"
+    "solarTerm": "end-of-heat",
+    "adjustedLunarDate": {
+      "day": 26,
+      "month": 7,
+      "year": 1945,
+      "isLeapMonth": false
+    }
   },
   {
     "solarDate": {
@@ -13,7 +19,13 @@
       "month": 10,
       "year": 1949
     },
-    "solarTerm": "autumn-equinox"
+    "solarTerm": "autumn-equinox",
+    "adjustedLunarDate": {
+      "day": 10,
+      "month": 8,
+      "year": 1949,
+      "isLeapMonth": false
+    }
   },
   {
     "solarDate": {
@@ -21,7 +33,13 @@
       "month": 1,
       "year": 1966
     },
-    "solarTerm": "severe-cold"
+    "solarTerm": "severe-cold",
+    "adjustedLunarDate": {
+      "day": 2,
+      "month": 12,
+      "year": 1965,
+      "isLeapMonth": false
+    }
   },
   {
     "solarDate": {
@@ -29,7 +47,13 @@
       "month": 2,
       "year": 1966
     },
-    "solarTerm": "spring-commences"
+    "solarTerm": "spring-commences",
+    "adjustedLunarDate": {
+      "day": 16,
+      "month": 1,
+      "year": 1966,
+      "isLeapMonth": false
+    }
   },
   {
     "solarDate": {
@@ -37,6 +61,12 @@
       "month": 4,
       "year": 1975
     },
-    "solarTerm": "corn-rain"
+    "solarTerm": "corn-rain",
+    "adjustedLunarDate": {
+      "day": 20,
+      "month": 3,
+      "year": 1975,
+      "isLeapMonth": false
+    }
   }
 ]

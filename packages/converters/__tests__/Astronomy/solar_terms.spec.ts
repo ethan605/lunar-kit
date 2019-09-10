@@ -1,4 +1,4 @@
-import Astronomy from '../../src/Astronomy';
+import { Astronomy } from '../../src/Astronomy';
 import SolarDate from '../../src/SolarDate';
 
 // Fixtures

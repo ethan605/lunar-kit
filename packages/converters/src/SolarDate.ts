@@ -1,4 +1,4 @@
-import Astronomy, { AstronomyParams } from './Astronomy';
+import { Astronomy, AstronomyParams } from './Astronomy';
 import BaseDate from './BaseDate';
 import LunarDate from './LunarDate';
 import { SexagenaryDate } from './Sexagenary';

@@ -1,3 +1,5 @@
+import { Locales } from '../utils';
+
 import LOCALES from './locales.json';
 
 export enum Stem {
@@ -26,13 +28,6 @@ export enum Branch {
   Rooster,
   Dog,
   Pig,
-}
-
-export enum Locales {
-  Default = 'default',
-  Ko = 'ko',
-  Vi = 'vi',
-  Zh = 'zh',
 }
 
 interface SexagenaryParams {
