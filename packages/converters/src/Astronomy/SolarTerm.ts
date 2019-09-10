@@ -22,7 +22,7 @@ export default class SolarTerm {
     this.sunLongitude = sunLongitude;
   }
 
-  static SpringCommences: SolarTerm; // = new SolarTerm(SOLAR_TERMS[0]);
+  static SpringCommences: SolarTerm; // = SolarTerm(SOLAR_TERMS[0]);
   static SpringShowers: SolarTerm; // = new SolarTerm(SOLAR_TERMS[1]);
   static InsectsWaken: SolarTerm; // = new SolarTerm(SOLAR_TERMS[2]);
   static VernalEquinox: SolarTerm; // = new SolarTerm(SOLAR_TERMS[3]);

@@ -57,6 +57,8 @@ jspm_packages/
 # next.js build output
 .next
 
+.DS_Store
+
 # Parcel build caches
 .cache
 ts-dist
