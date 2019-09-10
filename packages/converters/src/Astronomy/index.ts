@@ -1,4 +1,7 @@
+import _ from 'lodash';
 import SolarDate from '../SolarDate';
+
+import SOLAR_TERMS from './solar_terms.json';
 
 export interface AstronomyParams {
   timeZone: number;
@@ -61,6 +64,49 @@ export default class Astronomy {
     return Math.floor(julianDays + C - delta + 0.5 + this.timeZone / 24);
   }
 
+  /**
+   * Compute solar term, in degree between [0°, 360°]
+   */
+  getSolarTerm(julianDays: number): string {
+    const accurateSunLong = Math.floor(this.getSunLongitudeInDegree(julianDays));
+    const roundedSunLong = accurateSunLong - (accurateSunLong % 15);
+    const { locales } = _.find(SOLAR_TERMS, { sunLongitude: roundedSunLong });
+    return locales.default;
+  }
+
+  /**
+   * Find the day that starts the luner month 11 of the given year for the given time zone
+   */
+  getLunarMonth11(year: number): number {
+    const solarDate = new SolarDate({ day: 31, month: 12, year });
+    const off = solarDate.toJulianDays() - 2415021.076998695;
+    const order = Math.floor(off / 29.530588853);
+    const newMoonDay = this.getNewMoonDay(order);
+    const sunLong = this.getSunLongitudeNormalized(newMoonDay);
+    if (sunLong >= 9) return this.getNewMoonDay(order - 1);
+    return newMoonDay;
+  }
+
+  /**
+   * Find the index of the leap month after the month starting on the day of 11th lunar month.
+   */
+  getLeapMonthOffset(lunarMonth11: number): number {
+    const order = Math.floor((lunarMonth11 - 2415021.076998695) / 29.530588853 + 0.5);
+
+    // We start with the month following lunar month 11
+    let last = 0;
+    let counter = 1;
+    let arc = 0;
+
+    do {
+      last = arc;
+      counter += 1;
+      arc = this.getSunLongitudeNormalized(this.getNewMoonDay(order + counter));
+    } while (arc != last && counter < 14);
+
+    return counter - 1;
+  }
+
   private calculateSunLongitute(julianDays: number): number {
     // Time in Julian centuries from 2000-01-01 12:00:00 GMT
     const T = (julianDays - 0.5 - this.timeZone / 24 - 2451545.0) / 36525;
@@ -88,7 +134,7 @@ export default class Astronomy {
    * From the day after March equinox and the 1st major term after March equinox, 0 is returned.
    * After that, return 1, 2, 3 ...
    */
-  getSunLongitudeMidNight(julianDays: number): number {
+  private getSunLongitudeNormalized(julianDays: number): number {
     // True longitude in degree
     const theta = (this.calculateSunLongitute(julianDays) * Math.PI) / 180;
 
@@ -98,43 +144,13 @@ export default class Astronomy {
     return Math.floor((lambda / Math.PI) * 6);
   }
 
-  getSunLongitudeSolarTerm(julianDays: number): number {
+  /**
+   * Compute sun position, in degree between [0°, 360°]
+   */
+  private getSunLongitudeInDegree(julianDays: number): number {
     const T = (julianDays - 0.5 - this.timeZone / 24 - 2451545.0) / 36525;
     const theta = this.calculateSunLongitute(julianDays);
     const lambda = theta - 0.00569 - 0.00478 * Math.sin(((125.04 - 1934.136 * T) * Math.PI) / 180);
     return lambda - 360 * Math.floor(lambda / 360);
-  }
-
-  /**
-   * Find the day that starts the luner month 11 of the given year for the given time zone
-   */
-  getLunarMonth11(year: number): number {
-    const solarDate = new SolarDate({ day: 31, month: 12, year });
-    const off = solarDate.toJulianDays() - 2415021.076998695;
-    const order = Math.floor(off / 29.530588853);
-    const newMoonDay = this.getNewMoonDay(order);
-    const sunLong = this.getSunLongitudeMidNight(newMoonDay);
-    if (sunLong >= 9) return this.getNewMoonDay(order - 1);
-    return newMoonDay;
-  }
-
-  /**
-   * Find the index of the leap month after the month starting on the day of 11th lunar month.
-   */
-  getLeapMonthOffset(lunarMonth11: number): number {
-    const order = Math.floor((lunarMonth11 - 2415021.076998695) / 29.530588853 + 0.5);
-
-    // We start with the month following lunar month 11
-    let last = 0;
-    let counter = 1;
-    let arc = 0;
-
-    do {
-      last = arc;
-      counter += 1;
-      arc = this.getSunLongitudeMidNight(this.getNewMoonDay(order + counter));
-    } while (arc != last && counter < 14);
-
-    return counter - 1;
   }
 }

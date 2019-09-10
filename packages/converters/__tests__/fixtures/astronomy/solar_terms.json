@@ -5,7 +5,7 @@
       "month": 9,
       "year": 1945
     },
-    "sunLong": 158.87277979821738
+    "solarTerm": "end-of-heat"
   },
   {
     "solarDate": {
@@ -13,7 +13,7 @@
       "month": 10,
       "year": 1949
     },
-    "sunLong": 187.19537817604214
+    "solarTerm": "autumn-equinox"
   },
   {
     "solarDate": {
@@ -21,7 +21,7 @@
       "month": 1,
       "year": 1966
     },
-    "sunLong": 301.2186003995921
+    "solarTerm": "severe-cold"
   },
   {
     "solarDate": {
@@ -29,7 +29,7 @@
       "month": 2,
       "year": 1966
     },
-    "sunLong": 315.4405281280451
+    "solarTerm": "spring-commences"
   },
   {
     "solarDate": {
@@ -37,6 +37,6 @@
       "month": 4,
       "year": 1975
     },
-    "sunLong": 38.75852616672637
+    "solarTerm": "corn-rain"
   }
 ]

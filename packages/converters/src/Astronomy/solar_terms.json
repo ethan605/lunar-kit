@@ -93,7 +93,7 @@
       }
     ],
     "locales": {
-      "default": "bright-and clear",
+      "default": "bright-and-clear",
       "ko": "청명",
       "vi": "Thanh Minh",
       "zh": "清明"
@@ -273,7 +273,7 @@
       }
     ],
     "locales": {
-      "default": "end-of heat",
+      "default": "end-of-heat",
       "ko": "처서",
       "vi": "Xử Thử",
       "zh": "處暑"
