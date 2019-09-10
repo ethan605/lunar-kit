@@ -10,7 +10,8 @@
     "directory": "packages/converters/dist"
   },
   "scripts": {
-    "build": "jest && gulp build",
+    "prebuild": "jest",
+    "build": "gulp build",
     "build:declaration": "tsc --project tsconfig.declaration.json",
     "console": "babel-node --extensions \".ts\"",
     "lint": "eslint . --ext .ts,.tsx",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
     "@types/gulp": "^4.0.6",
