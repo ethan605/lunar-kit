@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import { Locales, LocaleParams } from '../utils';
 
 import SOLAR_TERMS from './solar_terms.json';
