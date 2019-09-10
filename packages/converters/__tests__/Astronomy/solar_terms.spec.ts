@@ -11,7 +11,7 @@ describe('Astronomy', () => {
     it('should calculate solar terms correctly', () => {
       solarTermFixtures.forEach(({ solarDate, solarTerm }) => {
         const term = astronomy.getSolarTerm(new SolarDate(solarDate).toJulianDays());
-        expect(term).toEqual(solarTerm);
+        expect(term.toString()).toEqual(solarTerm);
       });
     });
   });

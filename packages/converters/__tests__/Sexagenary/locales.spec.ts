@@ -1,6 +1,7 @@
 import LunarDate from '../../src/LunarDate';
 import SolarDate from '../../src/SolarDate';
-import { Sexagenary, Locales } from '../../src/Sexagenary';
+import { Sexagenary } from '../../src/Sexagenary';
+import { Locales } from '../../src/utils';
 
 // Fixtures
 import fixtures from '../fixtures/sexagenaries/locales.json';
