@@ -9,8 +9,8 @@ describe('SolarDate', () => {
     it('should convert to Julian days correctly', () => {
       solarDateFixtures.forEach(({ gregorianDate, julianDays }) => {
         const [day, month, year] = gregorianDate;
-        const gDate = new SolarDate({ day, month, year });
-        expect(gDate.toJulianDays()).toEqual(julianDays);
+        const date = new SolarDate({ day, month, year });
+        expect(date.toJulianDays()).toEqual(julianDays);
       });
     });
 
