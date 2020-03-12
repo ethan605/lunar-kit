@@ -119,7 +119,7 @@ declare module '@lunarkit/converters' {
   export class LunarDate extends BaseDate {
     readonly isLeapMonth: boolean;
     constructor({ day, month, year, isLeapMonth }: LunarDateParams);
-    toSolarDate(timeZone: number): SolarDate;
+    toSolarDate({ timeZone }: AstronomyParams): SolarDate;
     toSexagenaryDate({ timeZone }: AstronomyParams): SexagenaryDate;
   }
 }
