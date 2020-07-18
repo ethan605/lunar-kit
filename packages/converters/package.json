@@ -30,7 +30,7 @@
     "gulp-clean": "^0.4.0",
     "gulp-exec": "^4.0.0",
     "jest": "^25.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "parcel-bundler": "^1.12.3",
     "typescript": "^3.8.3",
     "winston": "^3.2.1"
